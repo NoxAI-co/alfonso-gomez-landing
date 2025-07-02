@@ -1,0 +1,27 @@
+<svg width="260" height="60" viewBox="0 0 260 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bandera de Colombia (fondo semicircular, colores originales) -->
+  <g>
+    <ellipse cx="35" cy="30" rx="30" ry="28" fill="#FFD600"/>
+    <ellipse cx="35" cy="38" rx="30" ry="10" fill="#0057B7"/>
+    <ellipse cx="35" cy="48" rx="30" ry="6" fill="#EF3340"/>
+  </g>
+  <!-- Personas (tres siluetas unidas, más oscuras) -->
+  <g>
+    <!-- Persona central -->
+    <circle cx="35" cy="28" r="8" fill="#18181B"/>
+    <rect x="31" y="36" width="8" height="14" rx="4" fill="#18181B"/>
+    <!-- Persona izquierda -->
+    <circle cx="20" cy="32" r="6" fill="#27272A"/>
+    <rect x="16" y="38" width="7" height="10" rx="3.5" fill="#27272A"/>
+    <!-- Persona derecha -->
+    <circle cx="50" cy="32" r="6" fill="#27272A"/>
+    <rect x="47" y="38" width="7" height="10" rx="3.5" fill="#27272A"/>
+    <!-- Brazos abrazando -->
+    <path d="M27 38 Q35 44 43 38" stroke="#18181B" stroke-width="3" fill="none"/>
+    <path d="M22 36 Q28 40 35 38" stroke="#27272A" stroke-width="2" fill="none"/>
+    <path d="M48 36 Q42 40 35 38" stroke="#27272A" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Texto institucional -->
+  <text x="70" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="bold" fill="#B91C1C">Cristancho</text>
+  <text x="72" y="54" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#333">Unidos por el cambio</text>
+</svg>

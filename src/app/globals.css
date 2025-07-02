@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  html,
+  body {
+    @apply dark:bg-trueGray-900;
+  }
+}
+
+/* Paleta elegante blanco, gris oscuro y rojo solo en detalles */
+body, html {
+  background: #fff;
+  color: #222;
+}
+
+:root {
+  --primary: #b91c1c; /* rojo elegante */
+  --accent: #b91c1c;
+  --secondary: #fff;
+  --background: #fff;
+  --foreground: #222;
+}
+
+/* Enlaces */
+a {
+  color: #222;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #b91c1c;
+}
+
+/* Botones */
+button, .btn, .shadcn-btn {
+  background: #b91c1c;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover, .shadcn-btn:hover {
+  background: #991b1b;
+}
+
+/* Botón secundario */
+.btn-outline, .shadcn-btn-outline {
+  background: #fff;
+  color: #222;
+  border: 2px solid #b91c1c;
+}
+.btn-outline:hover, .shadcn-btn-outline:hover {
+  background: #f3f4f6;
+  color: #b91c1c;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-weight: 800;
+}
+
+/* Badges y detalles */
+.badge, .border-primary, .border-accent {
+  border-color: #b91c1c !important;
+  color: #b91c1c !important;
+  background: #fff !important;
+}
+
+/* Subrayado rojo para detalles */
+.underline-red {
+  border-bottom: 3px solid #b91c1c;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+/* Fondo de secciones */
+section, .section {
+  background: #fff;
+}
+
+/* Animación gradiente vertical (de arriba a abajo) */
+@keyframes gradient-vertical {
+  0% { top: -80px; }
+  100% { top: 100%; }
+}
+.animate-gradient-vertical {
+  animation: gradient-vertical 2.5s linear infinite;
+  width: 12px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+}
+
+/* Animación gradiente horizontal (de izquierda a derecha) */
+@keyframes gradient-horizontal {
+  0% { left: -320px; }
+  100% { left: 100%; }
+}
+.animate-gradient-horizontal {
+  animation: gradient-horizontal 2.5s linear infinite;
+  height: 12px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
