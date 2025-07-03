@@ -30,7 +30,6 @@ export const Navbar = () => {
           <li><a href="#sobre" className="text-gray-800 font-medium hover:text-red-700 transition-colors">Sobre nosotros</a></li>
           <li><a href="#proyectos" className="text-gray-800 font-medium hover:text-red-700 transition-colors">Proyectos</a></li>
           <li><a href="#testimonios" className="text-gray-800 font-medium hover:text-red-700 transition-colors">Testimonios</a></li>
-          <li><a href="#contacto" className="text-gray-800 font-medium hover:text-red-700 transition-colors">Contacto</a></li>
         </ul>
       </div>
     </nav>

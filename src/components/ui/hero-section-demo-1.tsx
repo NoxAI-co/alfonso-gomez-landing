@@ -13,7 +13,7 @@ const NAV_ITEMS = [
 
 export default function HeroSectionOne() {
   return (
-    <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+    <div className="relative mx-auto mt-0 mb-10 flex max-w-7xl flex-col items-center justify-center">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 overflow-hidden">
         <div className="absolute top-0 h-40 w-px animate-gradient-vertical bg-gradient-to-b from-transparent via-red-600 to-transparent" />
       </div>
@@ -23,7 +23,20 @@ export default function HeroSectionOne() {
       <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 overflow-hidden">
         <div className="absolute mx-auto h-px w-40 animate-gradient-horizontal bg-gradient-to-r from-transparent via-red-600 to-transparent" />
       </div>
-      <div className="px-4 py-10 md:py-20">
+      <div className="px-4 py-4">
+        {/* Bloque de confianza */}
+        <div className="w-full flex justify-center mb-6">
+          <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1 shadow-sm">
+            <div className="flex -space-x-2">
+              <img src="/img/user1.jpg" alt="Testimonio 1" className="w-6 h-6 rounded-full border border-white shadow-sm" />
+              <img src="/img/user2.jpg" alt="Testimonio 2" className="w-6 h-6 rounded-full border border-white shadow-sm" />
+              <img src="/img/user3.jpg" alt="Testimonio 3" className="w-6 h-6 rounded-full border border-white shadow-sm" />
+            </div>
+            <span className="ml-2 text-gray-700 text-xs font-medium">
+              Apoyado por <span className="font-bold text-red-700">120+ familias y líderes sociales</span>
+            </span>
+          </div>
+        </div>
         <Fade cascade damping={0.1} triggerOnce>
           <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-black md:text-4xl lg:text-7xl">
             <span className="text-black">Unidos por el </span><span className="text-red-600">cambio</span><span className="text-black">, construyendo </span><span className="text-red-600">futuro</span>

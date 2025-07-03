@@ -7,36 +7,19 @@ export function Footer() {
   return (
     <div className="relative bg-white border-t border-gray-200">
       <Container>
-        <div className="max-w-screen-xl mx-auto pt-10 pb-6 flex flex-col items-center gap-4">
-          {/* Logo institucional centrado */}
-          <div className="flex flex-col items-center">
-            <Image
-              src="/img/logo.svg"
-              alt="Logo Cristancho"
-              width={260}
-              height={260}
-              className="w-64 h-64 mb-1"
-            />
+        <div className="max-w-screen-xl mx-auto py-6 flex flex-col items-center gap-4">
+          {/* Redes sociales minimalistas */}
+          <div className="flex items-center gap-8">
+            <a href="https://www.facebook.com/profile.php?id=61573126976563&ref=pro_upsell_xav_ig_profile_page_web#" target="_blank" rel="noopener" aria-label="Facebook" className="text-gray-400 hover:text-red-600 transition-colors">
+              <Facebook size={24} />
+            </a>
+            <a href="https://www.instagram.com/soyjohncristancho/" target="_blank" rel="noopener" aria-label="Instagram" className="text-gray-400 hover:text-red-600 transition-colors">
+              <Instagram size={24} />
+            </a>
           </div>
-          {/* Copy institucional */}
-          <div className="max-w-2xl text-center text-gray-700 text-base lg:text-lg mb-2">
-            Esta plataforma es un espacio para la transformación social y el trabajo colectivo. Aquí compartimos proyectos, historias y sueños para construir una Colombia más justa, solidaria y llena de oportunidades para todos.
-          </div>
-          {/* Redes sociales */}
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-gray-900 font-semibold mb-2">Síguenos</span>
-            <div className="flex space-x-8">
-              <a href="https://www.facebook.com/profile.php?id=61573126976563&ref=pro_upsell_xav_ig_profile_page_web#" target="_blank" rel="noopener" aria-label="Facebook" className="text-gray-700 hover:text-red-700 transition-colors">
-                <Facebook size={36} />
-              </a>
-              <a href="https://www.instagram.com/soyjohncristancho/" target="_blank" rel="noopener" aria-label="Instagram" className="text-gray-700 hover:text-red-700 transition-colors">
-                <Instagram size={36} />
-              </a>
-            </div>
-          </div>
-          {/* Copy legal */}
-          <div className="mt-6 text-sm text-center text-gray-500">
-            © {new Date().getFullYear()} | Plataforma para la campaña social y política de Jhon Cristancho.
+          {/* Copy legal minimalista */}
+          <div className="text-xs text-gray-400 text-center">
+            © {new Date().getFullYear()} Jhon Cristancho
           </div>
         </div>
       </Container>

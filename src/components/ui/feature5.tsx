@@ -20,35 +20,38 @@ export const Feature5 = () => (
         {/* Punto de anclaje para scroll exacto */}
         <div id="proyectos-tarjetas"></div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex flex-col gap-4 bg-white border-2 border-gray-200 rounded-xl p-8 shadow-sm transition-transform hover:scale-105">
-            <div className="relative rounded-md aspect-video mb-4 flex items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/img/construyendo-sueños.png" alt="Construyendo sueños" className="object-cover w-full h-full" />
-              <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-white/70 via-white/30 to-transparent"></div>
+          <div className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="relative aspect-video overflow-hidden">
+              <img src="/img/construyendo-sueños.jpg" alt="Construyendo sueños" className="object-cover w-full h-full" />
             </div>
-            <h3 className="text-2xl tracking-tight font-extrabold text-black text-center">Construyendo <span className="text-red-600">sueños</span></h3>
-            <p className="text-gray-700 text-base text-center">
-              Entregamos viviendas dignas a familias que más lo necesitan, construyendo esperanza y mejorando la calidad de vida en nuestra comunidad.
-            </p>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Construyendo sueños</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Entregamos viviendas dignas a familias que más lo necesitan, construyendo esperanza y mejorando la calidad de vida en nuestra comunidad.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col gap-4 bg-white border-2 border-gray-200 rounded-xl p-8 shadow-sm transition-transform hover:scale-105">
-            <div className="relative rounded-md aspect-video mb-4 flex items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/img/deporte.png" alt="Apoyo al deporte" className="object-cover w-full h-full" />
-              <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-white/70 via-white/30 to-transparent"></div>
+          <div className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="relative aspect-video overflow-hidden">
+              <img src="/img/deporte.jpg" alt="Apoyo al deporte" className="object-cover w-full h-full" />
             </div>
-            <h3 className="text-2xl tracking-tight font-extrabold text-black text-center">Apoyo al <span className="text-red-600">deporte</span></h3>
-            <p className="text-gray-700 text-base text-center">
-              Impulsamos el deporte y la recreación con torneos, eventos y jornadas de integración, promoviendo valores y bienestar para todos.
-            </p>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Apoyo al deporte</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Impulsamos el deporte y la recreación con torneos, eventos y jornadas de integración, promoviendo valores y bienestar para todos.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col gap-4 bg-white border-2 border-gray-200 rounded-xl p-8 shadow-sm transition-transform hover:scale-105">
-            <div className="relative rounded-md aspect-video mb-4 flex items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/img/iniciativa-social.png" alt="Iniciativa social" className="object-cover w-full h-full" />
-              <div className="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-white/70 via-white/30 to-transparent"></div>
+          <div className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="relative aspect-video overflow-hidden">
+              <img src="/img/iniciativa-social.jpg" alt="Iniciativa social" className="object-cover w-full h-full" />
             </div>
-            <h3 className="text-2xl tracking-tight font-extrabold text-black text-center">Iniciativa <span className="text-red-600">social</span></h3>
-            <p className="text-gray-700 text-base text-center">
-              Desarrollamos programas de ayuda, inclusión y acompañamiento, generando oportunidades y fortaleciendo el tejido social de nuestra región.
-            </p>
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Iniciativa social</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Desarrollamos programas de ayuda, inclusión y acompañamiento, generando oportunidades y fortaleciendo el tejido social de nuestra región.
+              </p>
+            </div>
           </div>
         </div>
       </div>

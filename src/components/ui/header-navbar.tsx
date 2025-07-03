@@ -10,7 +10,6 @@ const NAV_ITEMS = [
   { text: "Sobre nosotros", href: "#sobre-nosotros" },
   { text: "Proyectos", href: "#proyectos" },
   { text: "Testimonios", href: "#testimonios" },
-  { text: "Contacto", href: "#cta" },
 ];
 
 export default function Navbar() {

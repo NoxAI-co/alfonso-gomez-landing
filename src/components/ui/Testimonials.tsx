@@ -86,13 +86,10 @@ const Testimonials = () => {
       <div className="container z-10 mx-auto">
         <Fade direction="up" triggerOnce>
           <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
-            <div className="flex justify-center">
-              <div className="border py-1 px-4 rounded-lg text-red-700 border-red-200 bg-red-50">Testimonios</div>
-            </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
-              Historias que inspiran y transforman
+            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-extrabold text-black text-center">
+              Historias que <span className="text-red-600">inspiran</span> y transforman
             </h2>
-            <p className="text-center mt-5 opacity-75 text-gray-700">
+            <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-black text-center">
               Conoce las voces de quienes han sido parte de nuestros proyectos sociales y comunitarios. Sus testimonios reflejan el impacto real de trabajar juntos por una Colombia más solidaria.
             </p>
           </div>
