@@ -73,8 +73,9 @@ export default function HeroSectionOne() {
         <Slide direction="up" delay={700} triggerOnce>
           <div className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md">
             <div className="w-full overflow-hidden rounded-xl border border-gray-300">
+              {/* Usando URL directa al video de Facebook */}
               <video
-                src="/mp4/testimonio.mp4"
+                src="https://scontent.feoh1-1.fna.fbcdn.net/o1/v/t2/f2/m69/AQMVrqJ67l1HjY8xHQ6HAavIDfnzuQS2Owepu0SLc13dCgitdCU-Mcx4HotpnFbvZUY7_XsUweK1YKAEiJ1P1LFS.mp4?strext=1&_nc_cat=104&_nc_oc=AdlX3jdz7yif2Xh_ykpUhLCEVhVpnhFK5Mgegw1JbXyqVGj6b5nbgWiVpaYDGytKfQI&_nc_sid=8bf8fe&_nc_ht=scontent.feoh1-1.fna.fbcdn.net&_nc_ohc=ygkZ7MVEAykQ7kNvwH9TArk&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNjQwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTk1NjUwMjc1NTE3NzQzOCwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjEyNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_zt=28&_nc_rml=0&oh=00_AfO27lHI8pNQNIzLVr0Vsuf0Ct-6Am89liUXsK6ocLVYvQ&oe=686CACE2"
                 autoPlay
                 muted
                 loop
