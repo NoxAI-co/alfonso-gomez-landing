@@ -13,7 +13,7 @@ export const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14">
             <p className="text-2xl leading-normal ">
-              "Gracias a la entrega de viviendas, mi familia ahora tiene un hogar digno y seguro. Este proyecto nos devolvió la esperanza."
+              &#8220;Gracias a la entrega de viviendas, mi familia ahora tiene un hogar digno y seguro. Este proyecto nos devolvió la esperanza.&#8221;
             </p>
             <Avatar
               image={userOneImg}
@@ -25,7 +25,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14">
             <p className="text-2xl leading-normal ">
-              "El apoyo al deporte ha unido a los jóvenes del barrio y nos ha dado motivación para salir adelante. ¡Gracias por creer en nosotros!"
+              &#8220;El apoyo al deporte ha unido a los jóvenes del barrio y nos ha dado motivación para salir adelante. ¡Gracias por creer en nosotros!&#8221;
             </p>
             <Avatar
               image={userTwoImg}
@@ -37,7 +37,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14">
             <p className="text-2xl leading-normal ">
-              "Las jornadas sociales han sido un alivio para muchas familias. Se siente el compromiso y la cercanía con la comunidad."
+              &#8220;Las jornadas sociales han sido un alivio para muchas familias. Se siente el compromiso y la cercanía con la comunidad.&#8221;
             </p>
             <Avatar
               image={userThreeImg}

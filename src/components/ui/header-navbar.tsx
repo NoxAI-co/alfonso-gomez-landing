@@ -58,14 +58,19 @@ export default function Navbar() {
           ))}
           {/* Botón institucional destacado */}
           <li>
-            <Button variant="default" size="sm" className="ml-2 text-white" asChild>
-              <a href="https://wa.me/573103662934" target="_blank" rel="noopener noreferrer" className="text-white">¡Súmate!</a>
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="ml-2 text-white" 
+              onClick={() => window.open('https://wa.me/573103662934', '_blank')}
+            >
+              ¡Súmate!
             </Button>
           </li>
         </ul>
         {/* Menú móvil */}
         <Button
-          variant="ghost"
+          variant="outline"
           size="icon"
           className="shrink-0 md:hidden"
           onClick={() => setOpen(!open)}
@@ -112,8 +117,13 @@ export default function Navbar() {
                 {item.text}
               </a>
             ))}
-            <Button variant="default" size="sm" className="mt-4 text-white" asChild>
-              <a href="https://wa.me/573103662934" target="_blank" rel="noopener noreferrer" className="text-white">¡Súmate!</a>
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="mt-4 text-white" 
+              onClick={() => window.open('https://wa.me/573103662934', '_blank')}
+            >
+              ¡Súmate!
             </Button>
           </nav>
         </div>

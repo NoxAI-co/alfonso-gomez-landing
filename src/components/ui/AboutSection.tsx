@@ -206,7 +206,7 @@ export const AboutSection = () => {
               whileHover={{ scale: 1.02 }}
             >
               <p className="text-lg font-medium text-gray-900 leading-relaxed">
-                "Cuando soñamos en grande y trabajamos juntos, logramos construir una Colombia más justa para todos."
+                &#8220;Cuando soñamos en grande y trabajamos juntos, logramos construir una Colombia más justa para todos.&#8221;
               </p>
             </motion.div>
 

@@ -2,6 +2,7 @@
 
 import { Fade, Slide } from "react-awesome-reveal";
 import { useState } from "react";
+import Image from "next/image";
 
 const NAV_ITEMS = [
   { label: "Inicio", href: "#hero" },
@@ -28,9 +29,9 @@ export default function HeroSectionOne() {
         <div className="w-full flex justify-center mb-6">
           <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1 shadow-sm">
             <div className="flex -space-x-2">
-              <img src="/img/user1.jpg" alt="Testimonio 1" className="w-6 h-6 rounded-full border border-white shadow-sm" />
-              <img src="/img/user2.jpg" alt="Testimonio 2" className="w-6 h-6 rounded-full border border-white shadow-sm" />
-              <img src="/img/user3.jpg" alt="Testimonio 3" className="w-6 h-6 rounded-full border border-white shadow-sm" />
+              <Image src="/img/user1.jpg" alt="Testimonio 1" width={24} height={24} className="w-6 h-6 rounded-full border border-white shadow-sm" />
+              <Image src="/img/user2.jpg" alt="Testimonio 2" width={24} height={24} className="w-6 h-6 rounded-full border border-white shadow-sm" />
+              <Image src="/img/user3.jpg" alt="Testimonio 3" width={24} height={24} className="w-6 h-6 rounded-full border border-white shadow-sm" />
             </div>
             <span className="ml-2 text-gray-700 text-xs font-medium">
               Apoyado por <span className="font-bold text-red-700">120+ familias y líderes sociales</span>

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 
@@ -23,7 +22,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-3 px-2">
         <div className="flex items-center gap-2">
           {/* Logo institucional */}
-          <img src="/img/logo.svg" alt="Logo Cristancho" className="h-12 w-auto" />
+          <Image src="/img/logo.svg" alt="Logo Cristancho" width={48} height={48} className="h-12 w-auto" />
         </div>
         <ul className="flex gap-6">
           <li><a href="#inicio" className="text-gray-800 font-medium hover:text-red-700 transition-colors">Inicio</a></li>

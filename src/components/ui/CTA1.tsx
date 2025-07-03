@@ -1,15 +1,17 @@
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export const CTA1 = () => (
   <div className="w-full py-8 lg:py-14 relative flex justify-center items-center">
     {/* Fondo con imagen y blur */}
     <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
-      <img
+      <Image
         src="/img/cta}.jpg"
         alt="Fondo CTA"
-        className="w-full h-full object-cover object-center brightness-75 blur-sm"
+        fill
+        className="object-cover object-center brightness-75 blur-sm"
       />
       <div className="absolute inset-0 bg-black/70" />
     </div>
