@@ -83,7 +83,7 @@ export default function HeroSectionOne() {
                 controls
                 className="aspect-[16/9] h-auto w-full object-cover"
               >
-                Tu navegador no soporta la reproducción de video.
+                El navegador no soporta la reproducción de video.
               </video>
             </div>
           </div>
