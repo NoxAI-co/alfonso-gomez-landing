@@ -289,18 +289,18 @@ export const AboutSection = () => {
             {/* Contenido de la biografía en formato CV */}
             <motion.div
               className="bg-white rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-xl border border-gray-100 mx-2 sm:mx-0"
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.1 }}
             >
               {/* Header del CV con imagen */}
               <motion.div
                 className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-8 md:mb-10 lg:mb-12"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 {/* Imagen de Edgar */}
                 <div className="flex-shrink-0">
@@ -338,10 +338,10 @@ export const AboutSection = () => {
               {/* Experiencia Profesional */}
               <motion.div
                 className="mb-4 sm:mb-6 md:mb-8"
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <h4 className="text-lg sm:text-xl md:text-2xl font-black text-pacto-azul mb-2 sm:mb-3 md:mb-4 font-heading border-b-2 border-pacto-azul pb-2">
                   Experiencia Profesional
@@ -401,10 +401,10 @@ export const AboutSection = () => {
               {/* Gestiones Legislativas Destacadas */}
               <motion.div
                 className="mb-4 sm:mb-6 md:mb-8"
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <h4 className="text-lg sm:text-xl md:text-2xl font-black text-pacto-verde mb-2 sm:mb-3 md:mb-4 font-heading border-b-2 border-pacto-verde pb-2">
                   Gestiones Legislativas Destacadas
@@ -426,10 +426,10 @@ export const AboutSection = () => {
               {/* Compromiso Comunitario y Deporte */}
               <motion.div
                 className="mb-4 sm:mb-6 md:mb-8"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <h4 className="text-lg sm:text-xl md:text-2xl font-black text-pacto-morado mb-2 sm:mb-3 md:mb-4 font-heading border-b-2 border-pacto-morado pb-2">
                   Compromiso Comunitario y Deporte
@@ -459,10 +459,10 @@ export const AboutSection = () => {
               {/* Resumen de Trayectoria */}
               <motion.div
                 className="bg-gradient-to-r from-pacto-azul/10 to-pacto-morado/10 p-3 sm:p-4 md:p-6 rounded-xl border border-pacto-azul/20"
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 sm:mb-3 font-heading">Resumen de Trayectoria</h4>
                 <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
