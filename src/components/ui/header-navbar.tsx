@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
         {/* Logo institucional */}
         <a href="#hero" className="flex items-center gap-5 select-none" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <Image src="/img/logo.svg" alt="Logo Cristancho" width={140} height={140} className="w-36 h-36" />
+          <Image src="" alt="Logo edgar" width={140} height={140} className="w-36 h-36" />
         </a>
         {/* Navegación desktop */}
         <ul className="hidden md:flex gap-8 items-center">
