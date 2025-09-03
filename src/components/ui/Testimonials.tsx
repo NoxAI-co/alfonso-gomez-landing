@@ -3,76 +3,76 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const testimonials = [
   {
-    text: "Gracias a la entrega de viviendas, mi familia ahora tiene un hogar digno y seguro. Este proyecto nos devolvió la esperanza.",
+    text: "Gracias a su apoyo, el sector del calzado ha crecido y sigue siendo motor de empleo en Santander.",
     image: "/img/user1.jpg",
-    name: "Marta Rodríguez",
-    role: "Madre cabeza de hogar",
+    name: "Empresario local",
+    role: "Sector del calzado",
   },
   {
-    text: "El apoyo al deporte ha unido a los jóvenes del barrio y nos ha dado motivación para salir adelante. ¡Gracias por creer en nosotros!",
+    text: "Édgar ha sido un aliado permanente de los adultos mayores, con iniciativas solidarias que cambian vidas.",
     image: "/img/user2.jpg",
-    name: "Andrés Gómez",
-    role: "Joven deportista",
+    name: "Líder comunitaria",
+    role: "Adultos mayores",
   },
   {
-    text: "Las jornadas sociales han sido un alivio para muchas familias. Se siente el compromiso y la cercanía con la comunidad.",
+    text: "Siempre ha confiado en el deporte como herramienta de inclusión para nuestra juventud.",
     image: "/img/user1.jpg",
-    name: "Luz Dary Ramírez",
-    role: "Madre comunitaria",
+    name: "Entrenador de microfútbol",
+    role: "Deporte y juventud",
   },
   {
-    text: "Participar en los programas de integración me permitió conocer personas maravillosas y sentirme parte de una gran familia.",
+    text: "Su compromiso con la transparencia y la ética política nos da confianza en el futuro de Santander.",
     image: "/img/user2.jpg",
-    name: "Carlos Restrepo",
-    role: "Padre de familia",
+    name: "Ciudadano comprometido",
+    role: "Transparencia política",
   },
   {
-    text: "Gracias a las actividades deportivas, los niños y jóvenes del barrio tienen nuevas oportunidades y sueños por cumplir.",
+    text: "Las iniciativas para la tercera edad han transformado la vida de muchos adultos mayores en nuestra comunidad.",
     image: "/img/user1.jpg",
-    name: "Paola Martínez",
-    role: "Madre de familia",
+    name: "Coordinador social",
+    role: "Programas sociales",
   },
   {
-    text: "El acompañamiento y la ayuda recibida han sido fundamentales para salir adelante en momentos difíciles.",
+    text: "Como joven deportista, he visto cómo el deporte une a las familias y crea oportunidades de superación.",
     image: "/img/user2.jpg",
-    name: "Jorge Herrera",
-    role: "Padre cabeza de hogar",
+    name: "Joven atleta",
+    role: "Deporte comunitario",
   },
   {
-    text: "Ver cómo se transforma la vida de tantas familias me motiva a seguir apoyando estos proyectos.",
+    text: "Su gestión legislativa ha beneficiado directamente a miles de familias santandereanas.",
     image: "/img/user3.jpg",
-    name: "Diana Torres",
-    role: "Voluntaria social",
+    name: "Funcionario público",
+    role: "Gestión legislativa",
   },
   {
-    text: "La transparencia y el compromiso del equipo nos da confianza y esperanza en un mejor futuro.",
+    text: "El apoyo a los emprendedores locales ha generado empleo y desarrollo en nuestro departamento.",
     image: "/img/user2.jpg",
-    name: "Luis Fernando Pérez",
-    role: "Padre de familia",
+    name: "Emprendedor",
+    role: "Desarrollo económico",
   },
   {
-    text: "Ser parte de esta comunidad es un orgullo. Aquí todos sumamos y juntos logramos grandes cosas.",
+    text: "La cercanía con la gente y la escucha activa son cualidades que distinguen su liderazgo político.",
     image: "/img/user3.jpg",
-    name: "Gloria Mendoza",
-    role: "Líder comunitaria",
+    name: "Líder vecinal",
+    role: "Liderazgo comunitario",
   },
   {
-    text: "Como adulto mayor, agradezco el acompañamiento y el cariño recibido. Me siento valorado y escuchado.",
-    image: "/img/user2.jpg",
-    name: "José Antonio Ruiz",
-    role: "Adulto mayor beneficiario",
-  },
-  {
-    text: "Las actividades para niños han sido una bendición. Mis hijos están felices y aprenden valores cada día.",
+    text: "Gracias a sus iniciativas, muchos niños y jóvenes tienen acceso a actividades deportivas y culturales.",
     image: "/img/user1.jpg",
-    name: "Sandra Castaño",
-    role: "Madre de familia",
+    name: "Madre de familia",
+    role: "Programas juveniles",
   },
   {
-    text: "Como estudiante, participar en los talleres me ha motivado a superarme y a soñar en grande.",
+    text: "Su trabajo en el Congreso ha sido fundamental para el desarrollo de políticas sociales inclusivas.",
     image: "/img/user2.jpg",
-    name: "Juan Pablo Morales",
-    role: "Estudiante beneficiario",
+    name: "Analista político",
+    role: "Políticas públicas",
+  },
+  {
+    text: "La solidaridad y el compromiso con los más vulnerables son el sello de su gestión política.",
+    image: "/img/user3.jpg",
+    name: "Trabajador social",
+    role: "Inclusión social",
   },
 ];
 
@@ -85,12 +85,12 @@ const Testimonials = () => {
     <section className="bg-background my-20 relative">
       <div className="container z-10 mx-auto">
         <Fade direction="up" triggerOnce>
-          <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
-            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-black text-black text-center font-heading">
-              Historias que <span className="text-pacto-verde">inspiran</span> y transforman
+                                <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
+            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-black text-black text-center font-heading mb-8">
+              <span className="text-pacto-morado">Más unidos</span>, más potentes
             </h2>
             <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-700 text-center font-body">
-              Conoce las voces de quienes han sido parte de nuestros proyectos sociales y comunitarios. Sus testimonios reflejan el impacto real de trabajar juntos por una Colombia más solidaria.
+              El reconocimiento más valioso es el de la comunidad, que ha sido el centro de cada una de sus acciones.
             </p>
           </div>
         </Fade>
