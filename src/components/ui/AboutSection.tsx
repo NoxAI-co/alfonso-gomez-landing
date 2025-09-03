@@ -87,79 +87,34 @@ export const AboutSection = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {/* Columna izquierda - Apple Card Style */}
+            {/* Columna izquierda - Imagen de Édgar integrada */}
             <motion.div 
               className="flex justify-center lg:justify-start"
               variants={cardVariants}
             >
               <div className="relative">
-                {/* Fondo del mockup estilo Apple */}
+                {/* Imagen de Édgar con efectos integrados */}
                 <motion.div 
-                  className="bg-gradient-to-br from-pacto-amarillo/20 to-pacto-azul/20 rounded-3xl p-8 shadow-2xl max-w-md w-full transform -rotate-3 border-2 border-pacto-amarillo/30"
+                  className="relative max-w-md w-full"
                   whileHover={{ 
-                    rotate: 0, 
                     scale: 1.05,
                     transition: { duration: 0.3 }
                   }}
                 >
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-pacto-azul/10">
-                    {/* Botones del navegador */}
-                    <motion.div 
-                      className="flex items-center gap-3 mb-6"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5, duration: 0.4 }}
-                    >
-                      <motion.div 
-                        className="w-3 h-3 bg-pacto-rojo rounded-full"
-                        whileHover={{ scale: 1.3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      ></motion.div>
-                      <motion.div 
-                        className="w-3 h-3 bg-pacto-amarillo rounded-full"
-                        whileHover={{ scale: 1.3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      ></motion.div>
-                      <motion.div 
-                        className="w-3 h-3 bg-pacto-verde rounded-full"
-                        whileHover={{ scale: 1.3 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      ></motion.div>
-                    </motion.div>
-                                                      
-                    {/* Perfil de Jhon */}
-                    <motion.div 
-                      className="flex flex-col items-center text-center"
-                      variants={profileVariants}
-                    >
-                      <motion.div 
-                        className="mb-4"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        <Image
-                          src="/img/edgar.jpg"
-                          alt="Edgar Alfonso Gómez Román"
-                          width={80}
-                          height={80}
-                          className="rounded-full object-cover border-4 border-gray-100"
-                        />
-                      </motion.div>
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8, duration: 0.5 }}
-                      >
-                        <h4 className="font-black text-sm mb-2 font-heading">
-                          Conóceme: <span className="text-pacto-azul">Édgar Alfonso Gómez Román</span>
-                        </h4>
-                        <p className="text-xs text-gray-600 leading-relaxed">
-                        Un líder santandereano con una trayectoria impecable al servicio de la gente. 
-
-                        </p>
-                      </motion.div>
-                    </motion.div>
-                  </div>
+                  <Image
+                    src="/img/edgar1.jpg"
+                    alt="Edgar Alfonso Gómez Román"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                  />
+                  
+                  {/* Overlay con blur desde abajo y opacidad por los lados */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+                  
+                  {/* Efecto de blur sutil en los bordes */}
+                  <div className="absolute inset-0 rounded-2xl backdrop-blur-sm opacity-30"></div>
                 </motion.div>
               </div>
             </motion.div>
@@ -318,14 +273,14 @@ export const AboutSection = () => {
 
               {/* Timeline de experiencia profesional */}
               <div className="relative">
-                {/* Línea de tiempo vertical */}
-                <div className="absolute left-4 sm:left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pacto-azul via-pacto-verde to-pacto-morado"></div>
+                {/* Línea de tiempo vertical - MOVIDA HACIA LA IZQUIERDA */}
+                <div className="absolute left-2 sm:left-4 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pacto-azul via-pacto-verde via-pacto-amarillo to-pacto-morado z-0"></div>
                 
-                {/* Experiencias */}
+                {/* Experiencias - ORDEN CRONOLÓGICO CORRECTO */}
                 <div className="space-y-6 sm:space-y-8">
-                  {/* Senador Actual */}
+                  {/* 1. Senador Actual - MÁS RECIENTE */}
                   <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-azul rounded-full flex items-center justify-center shadow-lg z-10">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-azul rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
                       <span className="text-white font-bold text-xs sm:text-sm md:text-base">2022</span>
                     </div>
                     <div className="flex-1 bg-gradient-to-r from-pacto-azul/5 to-pacto-azul/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-azul">
@@ -335,9 +290,21 @@ export const AboutSection = () => {
                     </div>
                   </div>
 
-                  {/* Presidencia Cámara */}
+                  {/* 2. Senador 2010-2014 */}
                   <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-verde rounded-full flex items-center justify-center shadow-lg z-10">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-amarillo rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
+                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2010</span>
+                    </div>
+                    <div className="flex-1 bg-gradient-to-r from-pacto-amarillo/5 to-pacto-amarillo/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-amarillo">
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Senador de la República</h4>
+                      <p className="text-sm sm:text-base text-gray-700 mb-2">Periodo legislativo en el Senado de Colombia</p>
+                      <span className="inline-block bg-pacto-amarillo text-white px-2 py-1 rounded text-xs font-semibold">2010-2014</span>
+                    </div>
+                  </div>
+
+                  {/* 3. Presidencia Cámara */}
+                  <div className="relative flex items-start gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-verde rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
                       <span className="text-white font-bold text-xs sm:text-sm md:text-base">2009</span>
                     </div>
                     <div className="flex-1 bg-gradient-to-r from-pacto-verde/5 to-pacto-verde/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-verde">
@@ -347,27 +314,15 @@ export const AboutSection = () => {
                     </div>
                   </div>
 
-                  {/* Representante a la Cámara */}
+                  {/* 4. Representante a la Cámara - MÁS ANTIGUO */}
                   <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-morado rounded-full flex items-center justify-center shadow-lg z-10">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-morado rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
                       <span className="text-white font-bold text-xs sm:text-sm md:text-base">2003</span>
                     </div>
                     <div className="flex-1 bg-gradient-to-r from-pacto-morado/5 to-pacto-morado/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-morado">
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Representante a la Cámara</h4>
                       <p className="text-sm sm:text-base text-gray-700 mb-2">Múltiples periodos consolidando su papel como líder clave de Santander</p>
                       <span className="inline-block bg-pacto-morado text-white px-2 py-1 rounded text-xs font-semibold">2003-2010, 2014-2022</span>
-                    </div>
-                  </div>
-
-                  {/* Senador 2010-2014 */}
-                  <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-amarillo rounded-full flex items-center justify-center shadow-lg z-10">
-                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2010</span>
-                    </div>
-                    <div className="flex-1 bg-gradient-to-r from-pacto-amarillo/5 to-pacto-amarillo/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-amarillo">
-                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Senador de la República</h4>
-                      <p className="text-sm sm:text-base text-gray-700 mb-2">Periodo legislativo en el Senado de Colombia</p>
-                      <span className="inline-block bg-pacto-amarillo text-white px-2 py-1 rounded text-xs font-semibold">2010-2014</span>
                     </div>
                   </div>
                 </div>
@@ -463,118 +418,147 @@ export const AboutSection = () => {
       <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-6xl mx-auto">
-            {/* Título de la sección */}
-            <div className="text-center mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
-                <span className="text-pacto-morado">Propuestas</span> que transforman vidas
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl mx-auto">
-                La visión de Édgar &lsquo;El pote&rsquo; Gómez está orientada a resolver las necesidades reales de la gente. Estas son sus principales banderas:
-              </p>
-            </div>
-
-            {/* Timeline horizontal de propuestas */}
-            <div className="relative">
-              {/* Línea de tiempo horizontal */}
-              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-pacto-azul via-pacto-verde via-pacto-morado to-pacto-amarillo transform -translate-y-1/2"></div>
+            {/* Layout de dos columnas */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               
-              {/* Propuestas en timeline */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
-                              {/* Deporte y Juventud */}
-                <div className="relative group">
-                  {/* Nodo del timeline */}
-                  <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                    <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚽</span>
-                  </div>
-                  
-                  {/* Contenido */}
-                  <div className="text-center">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                      Deporte y Juventud
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
-                      Impulsar programas de formación deportiva, ligas comunitarias y recursos para jóvenes.
-                    </p>
-                  </div>
-                  
-                  {/* Línea conectora en móvil/tablet */}
-                  <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-azul to-transparent transform -translate-x-1/2"></div>
+              {/* Columna izquierda - Información de Propuestas */}
+              <div>
+                {/* Título de la sección */}
+                <div className="mb-8 sm:mb-12 md:mb-16">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
+                    <span className="text-pacto-morado">Propuestas</span> que transforman vidas
+                  </h2>
+                  <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl">
+                    La visión de Édgar &lsquo;El pote&rsquo; Gómez está orientada a resolver las necesidades reales de la gente. Estas son sus principales banderas:
+                  </p>
                 </div>
 
-                              {/* Economía Local */}
-                <div className="relative group">
-                  {/* Nodo del timeline */}
-                  <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                    <span className="text-white text-2xl sm:text-3xl md:text-4xl">👞</span>
-                  </div>
+                {/* Timeline horizontal de propuestas */}
+                <div className="relative">
+                  {/* Línea de tiempo horizontal */}
+                  <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-pacto-azul via-pacto-verde via-pacto-morado to-pacto-amarillo transform -translate-y-1/2"></div>
                   
-                  {/* Contenido */}
-                  <div className="text-center">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                      Economía Local
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
-                      Fortalecer la industria del calzado y apoyar a emprendedores santandereanos.
-                    </p>
+                  {/* Propuestas en timeline */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                    {/* Deporte y Juventud */}
+                    <div className="relative group">
+                      {/* Nodo del timeline */}
+                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
+                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚽</span>
+                      </div>
+                      
+                      {/* Contenido */}
+                      <div className="text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                          Deporte y Juventud
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
+                          Impulsar programas de formación deportiva, ligas comunitarias y recursos para jóvenes.
+                        </p>
+                      </div>
+                      
+                      {/* Línea conectora en móvil/tablet */}
+                      <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-azul to-transparent transform -translate-x-1/2"></div>
+                    </div>
+
+                    {/* Economía Local */}
+                    <div className="relative group">
+                      {/* Nodo del timeline */}
+                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
+                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">👞</span>
+                      </div>
+                      
+                      {/* Contenido */}
+                      <div className="text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                          Economía Local
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
+                          Fortalecer la industria del calzado y apoyar a emprendedores santandereanos.
+                        </p>
+                      </div>
+                      
+                      {/* Línea conectora en móvil/tablet */}
+                      <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-verde to-transparent transform -translate-x-1/2"></div>
+                    </div>
+
+                    {/* Protección Social */}
+                    <div className="relative group">
+                      {/* Nodo del timeline */}
+                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
+                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">🤝</span>
+                      </div>
+                      
+                      {/* Contenido */}
+                      <div className="text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                          Protección Social
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
+                          Ampliar programas para la tercera edad y poblaciones vulnerables.
+                        </p>
+                      </div>
+                      
+                      {/* Línea conectora en móvil/tablet */}
+                      <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-morado to-transparent transform -translate-x-1/2"></div>
+                    </div>
+
+                    {/* Gestión Legislativa */}
+                    <div className="relative group">
+                      {/* Nodo del timeline */}
+                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
+                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚖️</span>
+                      </div>
+                      
+                      {/* Contenido */}
+                      <div className="text-center">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                          Gestión Legislativa
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
+                          Promover leyes que fortalezcan la equidad, la justicia social y el desarrollo regional.
+                        </p>
+                      </div>
+                      
+                      {/* Línea conectora en móvil/tablet */}
+                      <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-amarillo to-transparent transform -translate-x-1/2"></div>
+                    </div>
                   </div>
-                  
-                  {/* Línea conectora en móvil/tablet */}
-                  <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-verde to-transparent transform -translate-x-1/2"></div>
                 </div>
 
-                {/* Protección Social */}
-                <div className="relative group">
-                  {/* Nodo del timeline */}
-                  <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                    <span className="text-white text-2xl sm:text-3xl md:text-4xl">🤝</span>
-                  </div>
-                  
-                  {/* Contenido */}
-                  <div className="text-center">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                      Protección Social
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
-                      Ampliar programas para la tercera edad y poblaciones vulnerables.
+                {/* CTA adicional */}
+                <div className="text-center mt-8 sm:mt-12 md:mt-16">
+                  <div className="bg-gradient-to-r from-pacto-azul/10 via-pacto-verde/10 to-pacto-morado/10 rounded-2xl p-6 sm:p-8 border-2 border-pacto-azul/20">
+                    <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-relaxed font-heading mb-4">
+                      &ldquo;Estas propuestas no son solo palabras, son compromisos concretos para transformar la realidad de Santander y Colombia.&rdquo;
+                    </p>
+                    <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
+                      - Édgar Alfonso Gómez Román
                     </p>
                   </div>
-                  
-                  {/* Línea conectora en móvil/tablet */}
-                  <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-morado to-transparent transform -translate-x-1/2"></div>
-                </div>
-
-                {/* Gestión Legislativa */}
-                <div className="relative group">
-                  {/* Nodo del timeline */}
-                  <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                    <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚖️</span>
-                  </div>
-                  
-                  {/* Contenido */}
-                  <div className="text-center">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                      Gestión Legislativa
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed px-2">
-                      Promover leyes que fortalezcan la equidad, la justicia social y el desarrollo regional.
-                    </p>
-                  </div>
-                  
-                  {/* Línea conectora en móvil/tablet */}
-                  <div className="lg:hidden absolute top-10 sm:top-12 left-1/2 w-0.5 h-16 sm:h-20 bg-gradient-to-b from-pacto-amarillo to-transparent transform -translate-x-1/2"></div>
                 </div>
               </div>
-            </div>
 
-            {/* CTA adicional */}
-            <div className="text-center mt-8 sm:mt-12 md:mt-16">
-              <div className="bg-gradient-to-r from-pacto-azul/10 via-pacto-verde/10 to-pacto-morado/10 rounded-2xl p-6 sm:p-8 border-2 border-pacto-azul/20">
-                <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-relaxed font-heading mb-4">
-                  &ldquo;Estas propuestas no son solo palabras, son compromisos concretos para transformar la realidad de Santander y Colombia.&rdquo;
-                </p>
-                <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                  - Édgar Alfonso Gómez Román
-                </p>
+              {/* Columna derecha - Imagen de Édgar2 */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative mt-40 sm:mt-44 md:mt-48">
+                  {/* Imagen de Égar2 */}
+                  <motion.div 
+                    className="relative max-w-md w-full"
+                    whileHover={{ 
+                      scale: 1.05,
+                      transition: { duration: 0.3 }
+                    }}
+                  >
+                    <Image
+                      src="/img/edgar2.jpg"
+                      alt="Edgar Alfonso Gómez Román - Propuestas"
+                      width={400}
+                      height={500}
+                      className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                    />
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -585,145 +569,174 @@ export const AboutSection = () => {
       <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-6xl mx-auto">
-            {/* Título de la sección */}
-            <div className="text-center mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
-                Un <span className="text-pacto-morado">liderazgo</span> con valores claros
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl mx-auto">
-                Los principios que guían la acción política de Édgar Alfonso Gómez Román
-              </p>
-            </div>
-
-            {/* Diseño de Infografía con Métricas para valores */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
-              {/* Valor 1: Cercanía */}
-              <div className="text-center group">
-                {/* Métrica principal */}
-                <div className="relative mb-6">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-azul mb-2">100%</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">Presencia Comunitaria</div>
-                </div>
-                
-                {/* Icono profesional */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                
-                {/* Título y descripción */}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                  Cercanía
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
-                  Siempre en contacto directo con la gente.
-                </p>
-                
-                {/* Barra de progreso */}
-                <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-pacto-azul h-2 rounded-full" style={{width: '100%'}}></div>
+            {/* Layout de dos columnas */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              
+              {/* Columna izquierda - Imagen */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative mt-40 sm:mt-44 md:mt-48">
+                  {/* Imagen de Édgar */}
+                  <motion.div 
+                    className="relative max-w-md w-full"
+                    whileHover={{ 
+                      scale: 1.05,
+                      transition: { duration: 0.3 }
+                    }}
+                  >
+                    <Image
+                      src="/img/edgar1.jpg"
+                      alt="Edgar Alfonso Gómez Román - Valores"
+                      width={400}
+                      height={500}
+                      className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                    />
+                  </motion.div>
                 </div>
               </div>
 
-              {/* Valor 2: Experiencia */}
-              <div className="text-center group">
-                {/* Métrica principal */}
-                <div className="relative mb-6">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-verde mb-2">20+</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">Años de Experiencia</div>
+              {/* Columna derecha - Información de Valores */}
+              <div>
+                {/* Título de la sección */}
+                <div className="mb-8 sm:mb-12 md:mb-16">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
+                    Un <span className="text-pacto-morado">liderazgo</span> con valores claros
+                  </h2>
+                  <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl">
+                    Los principios que guían la acción política de Édgar Alfonso Gómez Román
+                  </p>
                 </div>
-                
-                {/* Icono profesional */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                
-                {/* Título y descripción */}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                  Experiencia
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
-                  Más de 20 años de gestión en el Congreso.
-                </p>
-                
-                {/* Barra de progreso */}
-                <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-pacto-verde h-2 rounded-full" style={{width: '95%'}}></div>
-                </div>
-              </div>
 
-              {/* Valor 3: Compromiso Social */}
-              <div className="text-center group">
-                {/* Métrica principal */}
-                <div className="relative mb-6">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-morado mb-2">∞</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">Compromiso Infinito</div>
-                </div>
-                
-                {/* Icono profesional */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                
-                {/* Título y descripción */}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                  Compromiso Social
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
-                  Defensa de los sectores más vulnerables.
-                </p>
-                
-                {/* Barra de progreso */}
-                <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-pacto-morado h-2 rounded-full" style={{width: '100%'}}></div>
-                </div>
-              </div>
+                {/* Diseño de Infografía con Métricas para valores */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                  {/* Valor 1: Cercanía */}
+                  <div className="text-center group">
+                    {/* Métrica principal */}
+                    <div className="relative mb-6">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-azul mb-2">100%</div>
+                      <div className="text-sm sm:text-base text-gray-600 font-medium">Presencia Comunitaria</div>
+                    </div>
+                    
+                    {/* Icono profesional */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    
+                    {/* Título y descripción */}
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                      Cercanía
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
+                      Siempre en contacto directo con la gente.
+                    </p>
+                    
+                    {/* Barra de progreso */}
+                    <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-pacto-azul h-2 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
 
-              {/* Valor 4: Transparencia */}
-              <div className="text-center group">
-                {/* Métrica principal */}
-                <div className="relative mb-6">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-amarillo mb-2">100%</div>
-                  <div className="text-sm sm:text-base text-gray-600 font-medium">Transparencia Total</div>
-                </div>
-                
-                {/* Icono profesional */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                  <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                
-                {/* Título y descripción */}
-                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
-                  Transparencia
-                </h3>
-                <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
-                  Política con ética y responsabilidad.
-                </p>
-                
-                {/* Barra de progreso */}
-                <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-pacto-amarillo h-2 rounded-full" style={{width: '100%'}}></div>
-                </div>
-              </div>
-            </div>
+                  {/* Valor 2: Experiencia */}
+                  <div className="text-center group">
+                    {/* Métrica principal */}
+                    <div className="relative mb-6">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-verde mb-2">20+</div>
+                      <div className="text-sm sm:text-base text-gray-600 font-medium">Años de Experiencia</div>
+                    </div>
+                    
+                    {/* Icono profesional */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    
+                    {/* Título y descripción */}
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                      Experiencia
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
+                      Más de 20 años de gestión en el Congreso.
+                    </p>
+                    
+                    {/* Barra de progreso */}
+                    <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-pacto-verde h-2 rounded-full" style={{width: '95%'}}></div>
+                    </div>
+                  </div>
 
-            {/* CTA de valores */}
-            <div className="text-center mt-8 sm:mt-12 md:mt-16">
-              <div className="bg-gradient-to-r from-pacto-azul/10 via-pacto-verde/10 via-pacto-morado/10 to-pacto-amarillo/10 rounded-2xl p-6 sm:p-8 border-2 border-pacto-azul/20">
-                <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-relaxed font-heading mb-4">
-                  &ldquo;Estos valores no son solo palabras, son el compromiso diario que mantengo con Santander y Colombia.&rdquo;
-                </p>
-                <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                  - Édgar Alfonso Gómez Román
-                </p>
+                  {/* Valor 3: Compromiso Social */}
+                  <div className="text-center group">
+                    {/* Métrica principal */}
+                    <div className="relative mb-6">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-morado mb-2">∞</div>
+                      <div className="text-sm sm:text-base text-gray-600 font-medium">Compromiso Infinito</div>
+                    </div>
+                    
+                    {/* Icono profesional */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </div>
+                    
+                    {/* Título y descripción */}
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                      Compromiso Social
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
+                      Defensa de los sectores más vulnerables.
+                    </p>
+                    
+                    {/* Barra de progreso */}
+                    <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-pacto-morado h-2 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+
+                  {/* Valor 4: Transparencia */}
+                  <div className="text-center group">
+                    {/* Métrica principal */}
+                    <div className="relative mb-6">
+                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-amarillo mb-2">100%</div>
+                      <div className="text-sm sm:text-base text-gray-600 font-medium">Transparencia Total</div>
+                    </div>
+                    
+                    {/* Icono profesional */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    </div>
+                    
+                    {/* Título y descripción */}
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 mb-2 sm:mb-3 font-heading">
+                      Transparencia
+                    </h3>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed px-2">
+                      Política con ética y responsabilidad.
+                    </p>
+                    
+                    {/* Barra de progreso */}
+                    <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-pacto-amarillo h-2 rounded-full" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA de valores */}
+                <div className="text-center mt-8 sm:mt-12 md:mt-16">
+                  <div className="bg-gradient-to-r from-pacto-azul/10 via-pacto-verde/10 via-pacto-morado/10 to-pacto-amarillo/10 rounded-2xl p-6 sm:p-8 border-2 border-pacto-azul/20">
+                    <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-relaxed font-heading mb-4">
+                      &ldquo;Estos valores no son solo palabras, son el compromiso diario que mantengo con Santander y Colombia.&rdquo;
+                    </p>
+                    <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
+                      - Édgar Alfonso Gómez Román
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

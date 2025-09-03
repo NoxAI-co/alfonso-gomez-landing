@@ -100,8 +100,8 @@ const Hero = () => {
                >
                  Conoce su trayectoria
               </a>
-                             <a
-                 href="#contacto"
+              <a
+                href="#contacto"
                  className="px-8 py-4 text-lg font-semibold text-blue-300 border-2 border-blue-300 hover:bg-blue-400 hover:text-white hover:border-blue-400 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Súmate al cambio
