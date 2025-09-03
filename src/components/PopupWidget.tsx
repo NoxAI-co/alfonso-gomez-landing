@@ -56,7 +56,7 @@ export function PopupWidget() {
   return (
     <>
       <a
-        href="https://wa.me/573103662934"
+        href="https://wa.me/"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed z-40 flex items-center justify-center transition duration-300 bg-green-500 hover:bg-green-600 rounded-full shadow-lg right-5 bottom-5 w-16 h-16 focus:outline-none"

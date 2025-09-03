@@ -27,10 +27,10 @@ export const CTA1 = () => (
       </div>
       <div className="flex flex-row gap-2 justify-center w-full">
         <Button className="gap-4 bg-pacto-amarillo text-black hover:bg-[#e09a2a] border-0 font-bold font-heading" variant="outline">
-          <a href="https://wa.me/573103662934" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">Contáctanos</a>
         </Button>
         <Button className="gap-4 bg-pacto-azul text-white hover:bg-[#2a2d7a] border-0 font-bold font-heading">
-          <a href="https://wa.me/573103662934" target="_blank" rel="noopener noreferrer" className="text-white">¡Súmate!</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="text-white">¡Súmate!</a>
         </Button>
       </div>
     </div>

@@ -21,7 +21,7 @@ export const Cta = () => {
             Contáctanos
           </a>
           <a
-            href="https://wa.me/573103662934"
+            href="https://wa.me/"
             className="inline-block py-3 px-7 text-lg font-bold text-white bg-red-600 rounded-full shadow hover:bg-red-700 transition-all focus:outline-none focus:ring-2 focus:ring-red-500"
             target="_blank" rel="noopener noreferrer"
           >

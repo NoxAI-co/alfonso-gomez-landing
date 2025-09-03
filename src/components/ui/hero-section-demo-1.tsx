@@ -66,7 +66,7 @@ export default function HeroSectionOne() {
             </button>
             <button
               className="w-60 transform rounded-lg bg-pacto-amarillo px-8 py-3 font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-[#e09a2a] shadow-lg hover:shadow-xl font-heading"
-              onClick={() => window.open('https://wa.me/573103662934', '_blank')}
+              onClick={() => window.open('https://wa.me/', '_blank')}
             >
               Contáctanos
             </button>

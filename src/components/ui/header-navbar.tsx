@@ -62,7 +62,7 @@ export default function Navbar() {
               variant="default" 
               size="sm" 
               className="ml-2 text-white" 
-              onClick={() => window.open('https://wa.me/573103662934', '_blank')}
+              onClick={() => window.open('https://wa.me/', '_blank')}
             >
               ¡Súmate!
             </Button>
@@ -121,7 +121,7 @@ export default function Navbar() {
               variant="default" 
               size="sm" 
               className="mt-4 text-white" 
-              onClick={() => window.open('https://wa.me/573103662934', '_blank')}
+              onClick={() => window.open('https://wa.me/', '_blank')}
             >
               ¡Súmate!
             </Button>
