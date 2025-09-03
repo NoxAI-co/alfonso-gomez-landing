@@ -1,11 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
-
   // Agregar scroll suave global
   if (typeof window !== "undefined") {
     document.documentElement.style.scrollBehavior = "smooth";
