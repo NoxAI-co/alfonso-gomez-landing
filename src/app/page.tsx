@@ -2,7 +2,7 @@ import HeroSectionOne from "@/components/ui/hero-section-demo-1";
 import { Feature5 } from "@/components/ui/feature5";
 import Testimonials from "@/components/ui/Testimonials";
 import { CTA1 } from "@/components/ui/CTA1";
-import CreativePricingDemo from "@/components/ui/CreativePricing";
+
 import { AboutSection } from "@/components/ui/AboutSection";
 
 export default function Home() {
@@ -18,10 +18,7 @@ export default function Home() {
         <AboutSection />
       </section>
 
-      {/* Tres pasos */}
-      <section className="w-full py-16">
-        <CreativePricingDemo />
-      </section>
+
 
       {/* Proyectos */}
       <div id="proyectos" className="w-full">
