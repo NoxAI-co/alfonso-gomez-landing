@@ -111,7 +111,7 @@ function CreativePricingDemo() {
     return (
         <CreativePricing 
             tag="¿Cómo lograr tus sueños?"
-            title={<><span>Sigue estos </span><span className="text-red-600">3 pasos</span><span> y haz parte del cambio</span></>}
+            title={<><span>Sigue estos </span><span className="text-blue-600">3 pasos</span><span> y haz parte del cambio</span></>}
             description="Participar es fácil, humano y transformador. ¡Tú también puedes ser protagonista de una historia de impacto!"
             tiers={sampleTiers} 
         />

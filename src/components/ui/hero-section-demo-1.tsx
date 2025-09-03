@@ -40,12 +40,14 @@ export default function HeroSectionOne() {
         </div>
         <Fade cascade damping={0.1} triggerOnce>
           <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black text-black md:text-4xl lg:text-7xl font-heading">
-            <span className="text-black">Unidos por el </span><span className="text-pacto-amarillo">cambio</span><span className="text-black">, construyendo </span><span className="text-pacto-verde">futuro</span>
+            <span className="text-black"><span className="text-pacto-verde">Más unidos</span>, más potentes: Édgar <span className="text-pacto-amarillo">‘El pote’</span>Gomez</span>
+           
+          
           </h1>
         </Fade>
         <Fade delay={300} triggerOnce>
           <p className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-medium text-gray-700 font-body">
-            Trabajamos juntos para transformar vidas a través de proyectos sociales, vivienda digna, deporte e integración. Súmate y sé parte de una Colombia más justa y solidaria.
+          Experiencia, cercanía y compromiso al servicio de Santander y de Colombia.
           </p>
         </Fade>
         <Slide direction="up" delay={500} triggerOnce>
@@ -75,7 +77,7 @@ export default function HeroSectionOne() {
             <div className="w-full overflow-hidden rounded-xl border-2 border-pacto-azul/20">
               {/* Usando URL directa al video de Facebook */}
               <video
-                src="https://scontent.feoh1-1.fna.fbcdn.net/o1/v/t2/f2/m69/AQMVrqJ67l1HjY8xHQ6HAavIDfnzuQS2Owepu0SLc13dCgitdCU-Mcx4HotpnFbvZUY7_XsUweK1YKAEiJ1P1LFS.mp4?strext=1&_nc_cat=104&_nc_oc=AdlX3jdz7yif2Xh_ykpUhLCEVhVpnhFK5Mgegw1JbXyqVGj6b5nbgWiVpaYDGytKfQI&_nc_sid=8bf8fe&_nc_ht=scontent.feoh1-1.fna.fbcdn.net&_nc_ohc=ygkZ7MVEAykQ7kNvwH9TArk&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNjQwLnN2ZV9zZCIsInhwdl9hc3NldF9pZCI6MTk1NjUwMjc1NTE3NzQzOCwidmlfdXNlY2FzZV9pZCI6MTAxMjIsImR1cmF0aW9uX3MiOjEyNywidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_zt=28&_nc_rml=0&oh=00_AfO27lHI8pNQNIzLVr0Vsuf0Ct-6Am89liUXsK6ocLVYvQ&oe=686CACE2"
+                src="https://www.youtube.com/watch?v=9E98zMcdwAs"
                 autoPlay
                 muted
                 loop

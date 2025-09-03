@@ -123,8 +123,8 @@ export const AboutSection = () => {
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <Image
-                        src="/img/Cristancho.jpg"
-                        alt="Jhon Cristancho"
+                        src="/img/edgar.jpg"
+                        alt="Edgar Alfonso Gómez Román"
                         width={80}
                         height={80}
                         className="rounded-full object-cover border-4 border-gray-100"
@@ -136,10 +136,11 @@ export const AboutSection = () => {
                       transition={{ delay: 0.8, duration: 0.5 }}
                     >
                       <h4 className="font-black text-sm mb-2 font-heading">
-                        Conóceme: <span className="text-pacto-azul">Jhon Cristancho</span>
+                        Conóceme: <span className="text-pacto-azul">Édgar Alfonso Gómez Román</span>
                       </h4>
                       <p className="text-xs text-gray-600 leading-relaxed">
-                        Líder social y empresario comprometido con el cambio positivo en nuestras comunidades.
+                      Un líder santandereano con una trayectoria impecable al servicio de la gente. 
+
                       </p>
                     </motion.div>
                   </motion.div>
