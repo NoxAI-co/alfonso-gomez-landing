@@ -78,10 +78,10 @@ export const AboutSection = () => {
 
   return (
     <>
-      <section className="w-full py-20">
-        <div className="container mx-auto px-4">
+      <section className="w-full py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -95,7 +95,7 @@ export const AboutSection = () => {
               <div className="relative">
                 {/* Imagen de Édgar con efectos integrados */}
                 <motion.div 
-                  className="relative max-w-md w-full"
+                  className="relative max-w-xs sm:max-w-sm md:max-w-md w-full"
                   whileHover={{ 
                     scale: 1.05,
                     transition: { duration: 0.3 }
@@ -106,15 +106,8 @@ export const AboutSection = () => {
                     alt="Edgar Alfonso Gómez Román"
                     width={400}
                     height={500}
-                    className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                    className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
                   />
-                  
-                  {/* Overlay con blur desde abajo y opacidad por los lados */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
-                  
-                  {/* Efecto de blur sutil en los bordes */}
-                  <div className="absolute inset-0 rounded-2xl backdrop-blur-sm opacity-30"></div>
                 </motion.div>
               </div>
             </motion.div>
@@ -130,11 +123,10 @@ export const AboutSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 font-heading">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading">
                   Lo que nos <span className="text-pacto-morado">mueve</span>
                 </h1>
-                <br />
-                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 font-heading  ">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-3 sm:mb-4 font-heading">
                 La fuerza de la experiencia al servicio de la gente
                 </h2>
               </motion.div>
@@ -216,15 +208,15 @@ export const AboutSection = () => {
       </section>
 
       {/* Nueva sección de Biografía */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-4xl mx-auto">
             {/* Título de la sección */}
-            <div className="text-center mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
+            <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-900 mb-2 sm:mb-3 md:mb-4 font-heading px-2">
                 <span className="text-pacto-morado">La historia de Édgar &lsquo;El pote&rsquo; Gómez</span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-body mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4">
                 Con una trayectoria de más de 30 años en el servicio público, Édgar Alfonso Gómez Román es un referente de experiencia y compromiso en Santander y en Colombia. Su historia está marcada por la cercanía con la comunidad, el impulso al deporte y la gestión legislativa responsable.
               </p>
             </div>
@@ -415,20 +407,20 @@ export const AboutSection = () => {
       </section>
 
       {/* Nueva sección de Propuestas */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white to-gray-50">
+      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-6xl mx-auto">
             {/* Layout de dos columnas */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
               
               {/* Columna izquierda - Información de Propuestas */}
               <div>
                 {/* Título de la sección */}
-                <div className="mb-8 sm:mb-12 md:mb-16">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
+                <div className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-900 mb-2 sm:mb-3 md:mb-4 font-heading px-2">
                     <span className="text-pacto-morado">Propuestas</span> que transforman vidas
                   </h2>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-body mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 max-w-3xl">
                     La visión de Édgar &lsquo;El pote&rsquo; Gómez está orientada a resolver las necesidades reales de la gente. Estas son sus principales banderas:
                   </p>
                 </div>
@@ -541,10 +533,10 @@ export const AboutSection = () => {
 
               {/* Columna derecha - Imagen de Édgar2 */}
               <div className="flex justify-center lg:justify-end">
-                <div className="relative mt-40 sm:mt-44 md:mt-48">
+                <div className="relative mt-8 sm:mt-12 md:mt-16 lg:mt-40">
                   {/* Imagen de Égar2 */}
                   <motion.div 
-                    className="relative max-w-md w-full"
+                    className="relative max-w-xs sm:max-w-sm md:max-w-md w-full"
                     whileHover={{ 
                       scale: 1.05,
                       transition: { duration: 0.3 }
@@ -555,7 +547,7 @@ export const AboutSection = () => {
                       alt="Edgar Alfonso Gómez Román - Propuestas"
                       width={400}
                       height={500}
-                      className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                      className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
                     />
                   </motion.div>
                 </div>
@@ -566,29 +558,29 @@ export const AboutSection = () => {
       </section>
 
       {/* Nueva sección de Valores y Principios */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-6xl mx-auto">
             {/* Layout de dos columnas */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
               
               {/* Columna izquierda - Imagen */}
               <div className="flex justify-center lg:justify-start">
-                <div className="relative mt-40 sm:mt-44 md:mt-48">
+                <div className="relative mt-8 sm:mt-12 md:mt-16 lg:mt-40">
                   {/* Imagen de Édgar */}
                   <motion.div 
-                    className="relative max-w-md w-full"
+                    className="relative max-w-xs sm:max-w-sm md:max-w-md w-full"
                     whileHover={{ 
                       scale: 1.05,
                       transition: { duration: 0.3 }
                     }}
                   >
                     <Image
-                      src="/img/edgar1.jpg"
+                      src="/img/edgar3.jpg"
                       alt="Edgar Alfonso Gómez Román - Valores"
                       width={400}
                       height={500}
-                      className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+                      className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
                     />
                   </motion.div>
                 </div>
@@ -597,11 +589,11 @@ export const AboutSection = () => {
               {/* Columna derecha - Información de Valores */}
               <div>
                 {/* Título de la sección */}
-                <div className="mb-8 sm:mb-12 md:mb-16">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-3 sm:mb-4 font-heading px-2">
+                <div className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-900 mb-2 sm:mb-3 md:mb-4 font-heading px-2">
                     Un <span className="text-pacto-morado">liderazgo</span> con valores claros
                   </h2>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-600 font-body mb-6 sm:mb-8 px-4 max-w-3xl">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-body mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 max-w-3xl">
                     Los principios que guían la acción política de Édgar Alfonso Gómez Román
                   </p>
                 </div>
