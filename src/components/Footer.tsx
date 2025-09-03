@@ -10,10 +10,10 @@ export function Footer() {
         <div className="max-w-screen-xl mx-auto py-6 flex flex-col items-center gap-4">
           {/* Redes sociales minimalistas */}
           <div className="flex items-center gap-8">
-            <a href="https://www.facebook.com/profile.php?id=61573126976563&ref=pro_upsell_xav_ig_profile_page_web#" target="_blank" rel="noopener" aria-label="Facebook" className="text-gray-400 hover:text-red-600 transition-colors">
+            <a href="" target="_blank" rel="noopener" aria-label="Facebook" className="text-gray-400 hover:text-red-600 transition-colors">
               <Facebook size={24} />
             </a>
-            <a href="https://www.instagram.com/soyjohncristancho/" target="_blank" rel="noopener" aria-label="Instagram" className="text-gray-400 hover:text-red-600 transition-colors">
+            <a href="" target="_blank" rel="noopener" aria-label="Instagram" className="text-gray-400 hover:text-red-600 transition-colors">
               <Instagram size={24} />
             </a>
           </div>

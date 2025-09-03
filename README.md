@@ -245,7 +245,7 @@ Este proyecto está bajo la Licencia ISC. Ver el archivo `LICENSE` para más det
 
 ## 📞 Contacto
 
-- **WhatsApp**: [+57 310 366 2934](https://wa.me/573103662934)
+- **WhatsApp**: [+57 310 366 2934](https://wa.me/)
 - **Email**: [contacto@cristancho.com](mailto:contacto@cristancho.com)
 - **Sitio Web**: [cristancho.com](https://cristancho.com)
 
