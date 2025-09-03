@@ -1,20 +1,14 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
-  const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
-  ];
+  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
 
   // Agregar scroll suave global
-  if (typeof window !== 'undefined') {
-    document.documentElement.style.scrollBehavior = 'smooth';
+  if (typeof window !== "undefined") {
+    document.documentElement.style.scrollBehavior = "smooth";
   }
 
   return (
@@ -25,16 +19,45 @@ export const Navbar = () => {
           <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pacto-amarillo to-pacto-azul flex items-center justify-center shadow-lg">
             <span className="text-white font-black text-sm">PH</span>
           </div>
-          <span className="text-xl font-black text-pacto-azul font-heading">Pacto Histórico</span>
+          <span className="text-xl font-black text-pacto-azul font-heading">
+            Pacto Histórico
+          </span>
         </div>
         <ul className="flex gap-8">
-          <li><a href="#inicio" className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading">Inicio</a></li>
-          <li><a href="#sobre" className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading">Sobre nosotros</a></li>
-          <li><a href="#proyectos" className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading">Proyectos</a></li>
-          <li><a href="#testimonios" className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading">Testimonios</a></li>
+          <li>
+            <a
+              href="#inicio"
+              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
+            >
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              href="#sobre"
+              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
+            >
+              Sobre nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="#proyectos"
+              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
+            >
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a
+              href="#testimonios"
+              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
+            >
+              Testimonios
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
-  );}
-}
-
+  );
+};
