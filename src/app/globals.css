@@ -95,6 +95,23 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 2px;
 }
 
+/* Hero de pantalla completa */
+.hero-fullscreen {
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  position: relative;
+}
+
+/* Prevenir scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 /* Fondo de secciones */
 section, .section {
   background: #fff;

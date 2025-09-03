@@ -1,4 +1,4 @@
-import HeroSectionOne from "@/components/ui/hero-section-demo-1";
+import Hero from "@/components/Hero";
 import { Feature5 } from "@/components/ui/feature5";
 import Testimonials from "@/components/ui/Testimonials";
 import { CTA1 } from "@/components/ui/CTA1";
@@ -7,10 +7,10 @@ import { AboutSection } from "@/components/ui/AboutSection";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen flex flex-col items-center justify-center">
-      {/* Hero */}
-      <section id="hero" className="w-full">
-        <HeroSectionOne />
+    <main className="w-full min-h-screen flex flex-col items-center">
+             {/* Hero */}
+       <section id="hero" className="w-screen">
+        <Hero />
       </section>
 
       {/* Sobre nosotros */}
