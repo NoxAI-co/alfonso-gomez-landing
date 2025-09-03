@@ -1,0 +1,79 @@
+---
+description: "Regla de identidad visual Pacto Histórico para web (logo, colores, tipografías, variantes y accesibilidad)."
+globs:
+  - "**/*.{html,css,scss,js,jsx,ts,tsx}"
+  - "styles/**/*"
+  - "public/**/*"
+  - "assets/**/*"
+alwaysApply: true
+message: |
+  Eres un asistente que edita y genera código frontend manteniendo la identidad visual del Pacto Histórico en sitios web políticos. Aplica SIEMPRE estas reglas:
+
+  [OBJETIVO]
+  - Garantizar coherencia visual: logotipo, variantes, paleta cromática, tipografías y accesibilidad AA/AAA.
+
+  [LOGOTIPO]
+  - Usar el lockup principal por defecto con zona de seguridad.
+  - Si el fondo reduce visibilidad: colocar caja blanca detrás; si debe verse la imagen de fondo, usar fondo blanco al 70% bajo el logo.
+  - Variantes:
+    - Territorial: sustituir la tercera línea por el nombre del territorio (p.ej., Bogotá, Medellín, Arauca) manteniendo el estilo tipográfico del logotipo.
+    - Social/Grupo: sustituir la tercera línea por una franja con colores de la paleta representativos del grupo (p.ej., Juvenil por Bogotá, Maestros por Bogotá, Trabajadores del Café).
+  - Isotipo: se permite reemplazar la letra “O” en palabras si aporta impacto y mantiene legibilidad.
+
+  [TIPOGRAFÍAS]
+  - HOPE (decorativa, vectorial, compuesta manualmente):
+    - Solo para slogans muy cortos (máx. 1–2 palabras).
+    - Respetar orden cromático: Amarillo → Azul → Rojo → Verde → Morado → repetir.
+    - Simular “transparencias” superponiendo caracteres y AJUSTANDO COLOR de intersecciones manualmente (NO usar opacidades ni modos de fusión).
+  - LEMON MILK:
+    - Regular: titulares.
+    - Bold: cajas de texto / énfasis.
+  - Gill Sans: apoyo/secundaria para cuerpo si aplica.
+  - Evitar usar HOPE en titulares largos o párrafos.
+
+  [PALETA CROMÁTICA]
+  - Primarios (protagonistas):
+    - Amarillo #FEAE33 (254,174,51)
+    - Azul    #343598 (52,53,152)
+    - Rojo    #F8280C (248,40,12)
+    - Verde   #03AD43 (3,173,67)
+    - Morado  #8F3292 (143,50,146)
+  - Auxiliares (intersecciones/acentos/sombras):
+    - #E25916 (226,89,22)
+    - #039042 (3,144,66)
+    - #AC155B (172,21,91)
+  - No introducir colores ajenos a la paleta. Mantener consistencia de luces/sombras (escala de valor).
+
+  [REGLAS DE UI]
+  - Contraste de texto mínimo AA (ideal AAA en elementos críticos).
+  - No alterar el orden cromático en composiciones con HOPE.
+  - No usar opacidades para “transparencias” de letras; intersecciones con color sólido al 100%.
+  - Header: preferir fondo blanco o neutro; si hay imagen, caja blanca tras el logo.
+  - Footer: pueden usarse variantes territorial/social; mantener contraste legible.
+  - Botones:
+    - Primario: fondo #343598, texto #FFFFFF; hover oscurecer 8–12%; focus con outline auxiliar.
+    - Secundario: fondo #FEAE33, texto #000000; hover oscurecer 8–12%.
+  - Banners/Hero: LEMON MILK para titulares; HOPE solo para slogan breve con secuencia cromática correcta.
+  - Chips/Tags territoriales: cuando aplique, alinear con variante territorial del logotipo.
+
+  [AUTOMATIZACIONES (SI HAY CMS)]
+  - Detección territorial (subdominio/URL/metadatos/selector): actualizar tercera línea del logo al territorio.
+  - Segmento social (taxonomía “segmento”): tercera línea por franja de color(es) del segmento.
+
+  [TOKENS SUGERIDOS]
+  - colors.primary: [#FEAE33, #343598, #F8280C, #03AD43, #8F3292]
+  - colors.aux:     [#E25916, #039042, #AC155B]
+  - fonts.heading:  "LEMON MILK, system-ui, sans-serif"
+  - fonts.body:     "LEMON MILK, Gill Sans, system-ui, sans-serif"
+  - fonts.decor:    "HOPE (vectorial, composición manual)"
+
+  [VALIDACIONES]
+  - Verificar secuencia de color en textos HOPE.
+  - Si fondo es imagen/video y contraste bajo: aplicar caja blanca o fondo 70% bajo el logo.
+  - Coherencia entre URL/metadata y variante de logotipo (primary | territorial:<NOMBRE> | social:<SEGMENTO>).
+
+  [DO/DON'T]
+  - DO: asegurar legibilidad del logotipo; respetar paleta y orden cromático; aplicar controles de contraste.
+  - DON’T: añadir colores fuera de la paleta; usar HOPE en textos largos; crear “transparencias” con opacidades o blending.
+
+  Aplica estas reglas al generar/editar HTML, CSS/SCSS, JS/TS/React y activos gráficos relacionados con la identidad.

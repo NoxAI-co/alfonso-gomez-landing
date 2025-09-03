@@ -65,17 +65,17 @@ export const Feature5 = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Badge className="bg-primary text-white">Proyectos</Badge>
+              <Badge className="bg-pacto-azul text-white font-bold font-heading border-2 border-pacto-amarillo">Proyectos</Badge>
             </motion.div>
             <div className="flex gap-2 flex-col items-center text-center">
               <motion.h2 
-                className="text-3xl md:text-5xl tracking-tighter max-w-xl font-extrabold text-black text-center"
+                className="text-3xl md:text-5xl tracking-tighter max-w-xl font-black text-black text-center font-heading"
                 variants={fadeUpVariants}
               >
-                ¡Conoce nuestras <span className="text-red-600">iniciativas</span>!
+                ¡Conoce nuestras <span className="text-pacto-rojo">iniciativas</span>!
               </motion.h2>
               <motion.p 
-                className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-black text-center"
+                className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-700 text-center font-body"
                 variants={fadeUpVariants}
               >
                 Estos son los proyectos sociales y comunitarios que lidera Cristancho para transformar vidas.
@@ -110,16 +110,16 @@ export const Feature5 = () => {
                 description: "Desarrollamos programas de ayuda, inclusión y acompañamiento, generando oportunidades y fortaleciendo el tejido social de nuestra región."
               }
             ].map((project, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300"
-                variants={cardVariants}
-                whileHover={{ 
-                  y: -8,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                  transition: { duration: 0.3 }
-                }}
-              >
+                          <motion.div
+              key={index}
+              className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 border-2 border-transparent hover:border-pacto-amarillo"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -8,
+                boxShadow: "0 20px 40px rgba(52,53,152,0.15)",
+                transition: { duration: 0.3 }
+              }}
+            >
                 <motion.div 
                   className="relative aspect-video overflow-hidden"
                   whileHover={{ scale: 1.05 }}
@@ -127,9 +127,9 @@ export const Feature5 = () => {
                 >
                   <Image src={project.img} alt={project.alt} fill className="object-cover" />
                 </motion.div>
-                <div className="p-6">
+                <div className="p-6 bg-gradient-to-br from-white to-gray-50">
                   <motion.h3 
-                    className="text-xl font-bold text-gray-900 mb-3"
+                    className="text-xl font-black text-pacto-azul mb-3 font-heading"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
@@ -138,7 +138,7 @@ export const Feature5 = () => {
                     {project.title}
                   </motion.h3>
                   <motion.p 
-                    className="text-gray-600 text-sm leading-relaxed"
+                    className="text-gray-700 text-sm leading-relaxed font-body"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}

@@ -15,6 +15,22 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        // Paleta oficial Pacto Histórico
+        pacto: {
+          amarillo: '#FEAE33',
+          azul: '#343598', 
+          rojo: '#F8280C',
+          verde: '#03AD43',
+          morado: '#8F3292',
+          // Colores auxiliares
+          aux1: '#E25916',
+          aux2: '#039042', 
+          aux3: '#AC155B'
+        },
+        // Aliases para facilitar uso
+        primary: '#343598', // Azul principal
+        secondary: '#FEAE33', // Amarillo secundario
+        accent: '#F8280C', // Rojo de acento
       },
       keyframes: {
         'testimonials-scroll': {
@@ -27,7 +43,9 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      sans: ["LEMON MILK", "Inter", ...defaultTheme.fontFamily.sans],
+      heading: ["LEMON MILK", "system-ui", "sans-serif"],
+      body: ["LEMON MILK", "Gill Sans", "system-ui", "sans-serif"],
       stock: [defaultTheme.fontFamily.sans],
     },
   },

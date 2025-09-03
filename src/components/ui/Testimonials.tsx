@@ -86,10 +86,10 @@ const Testimonials = () => {
       <div className="container z-10 mx-auto">
         <Fade direction="up" triggerOnce>
           <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto">
-            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-extrabold text-black text-center">
-              Historias que <span className="text-red-600">inspiran</span> y transforman
+            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-black text-black text-center font-heading">
+              Historias que <span className="text-pacto-verde">inspiran</span> y transforman
             </h2>
-            <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-black text-center">
+            <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-gray-700 text-center font-body">
               Conoce las voces de quienes han sido parte de nuestros proyectos sociales y comunitarios. Sus testimonios reflejan el impacto real de trabajar juntos por una Colombia más solidaria.
             </p>
           </div>
@@ -111,8 +111,8 @@ export default Testimonials;
 function Avatar(props: { name: string; title: string }) {
   return (
     <div className="flex flex-col items-start mt-8">
-      <div className="text-lg font-medium">{props.name}</div>
-      <div className="text-gray-600">{props.title}</div>
+      <div className="text-lg font-bold text-pacto-azul font-heading">{props.name}</div>
+      <div className="text-gray-600 font-body">{props.title}</div>
     </div>
   );
 } 

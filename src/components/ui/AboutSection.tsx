@@ -80,14 +80,14 @@ export const AboutSection = () => {
             <div className="relative">
               {/* Fondo del mockup estilo Apple */}
               <motion.div 
-                className="bg-gray-100 rounded-3xl p-8 shadow-2xl max-w-md w-full transform -rotate-3"
+                className="bg-gradient-to-br from-pacto-amarillo/20 to-pacto-azul/20 rounded-3xl p-8 shadow-2xl max-w-md w-full transform -rotate-3 border-2 border-pacto-amarillo/30"
                 whileHover={{ 
                   rotate: 0, 
                   scale: 1.05,
                   transition: { duration: 0.3 }
                 }}
               >
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-pacto-azul/10">
                   {/* Botones del navegador */}
                   <motion.div 
                     className="flex items-center gap-3 mb-6"
@@ -96,17 +96,17 @@ export const AboutSection = () => {
                     transition={{ delay: 0.5, duration: 0.4 }}
                   >
                     <motion.div 
-                      className="w-3 h-3 bg-red-500 rounded-full"
+                      className="w-3 h-3 bg-pacto-rojo rounded-full"
                       whileHover={{ scale: 1.3 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     ></motion.div>
                     <motion.div 
-                      className="w-3 h-3 bg-yellow-400 rounded-full"
+                      className="w-3 h-3 bg-pacto-amarillo rounded-full"
                       whileHover={{ scale: 1.3 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     ></motion.div>
                     <motion.div 
-                      className="w-3 h-3 bg-green-500 rounded-full"
+                      className="w-3 h-3 bg-pacto-verde rounded-full"
                       whileHover={{ scale: 1.3 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     ></motion.div>
@@ -135,8 +135,8 @@ export const AboutSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8, duration: 0.5 }}
                     >
-                      <h4 className="font-bold text-sm mb-2">
-                        Conóceme: <span className="text-red-600">Jhon Cristancho</span>
+                      <h4 className="font-black text-sm mb-2 font-heading">
+                        Conóceme: <span className="text-pacto-azul">Jhon Cristancho</span>
                       </h4>
                       <p className="text-xs text-gray-600 leading-relaxed">
                         Líder social y empresario comprometido con el cambio positivo en nuestras comunidades.
@@ -159,8 +159,8 @@ export const AboutSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Lo que nos <span className="text-red-600">mueve</span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 font-heading">
+                Lo que nos <span className="text-pacto-morado">mueve</span>
               </h2>
             </motion.div>
 
@@ -172,7 +172,7 @@ export const AboutSection = () => {
               viewport={{ once: true }}
             >
               <motion.p 
-                className="text-lg leading-relaxed"
+                className="text-lg leading-relaxed font-body"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -184,7 +184,7 @@ export const AboutSection = () => {
               </motion.p>
               
               <motion.p 
-                className="text-lg leading-relaxed"
+                className="text-lg leading-relaxed font-body"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
@@ -198,14 +198,14 @@ export const AboutSection = () => {
 
             {/* Cita destacada */}
             <motion.div 
-              className="border-l-4 border-red-500 pl-6 py-4"
+              className="border-l-4 border-pacto-verde bg-gradient-to-r from-pacto-verde/5 to-transparent pl-6 py-4 rounded-r-lg"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <p className="text-lg font-medium text-gray-900 leading-relaxed">
+              <p className="text-lg font-bold text-gray-900 leading-relaxed font-heading">
                 &#8220;Cuando soñamos en grande y trabajamos juntos, logramos construir una Colombia más justa para todos.&#8221;
               </p>
             </motion.div>
@@ -220,7 +220,7 @@ export const AboutSection = () => {
             >
               <motion.a 
                 href="#proyectos" 
-                className="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors"
+                className="inline-flex items-center text-pacto-azul font-black hover:text-pacto-morado transition-colors font-heading"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >

@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 @layer base {
   html,
@@ -11,16 +11,30 @@
   }
 }
 
-/* Paleta elegante blanco, gris oscuro y rojo solo en detalles */
+/* Paleta oficial Pacto Histórico */
 body, html {
   background: #fff;
   color: #222;
+  font-family: 'LEMON MILK', 'Inter', system-ui, sans-serif;
 }
 
 :root {
-  --primary: #b91c1c; /* rojo elegante */
-  --accent: #b91c1c;
-  --secondary: #fff;
+  /* Colores primarios Pacto Histórico */
+  --pacto-amarillo: #FEAE33;
+  --pacto-azul: #343598;
+  --pacto-rojo: #F8280C;
+  --pacto-verde: #03AD43;
+  --pacto-morado: #8F3292;
+  
+  /* Colores auxiliares */
+  --pacto-aux1: #E25916;
+  --pacto-aux2: #039042;
+  --pacto-aux3: #AC155B;
+  
+  /* Variables principales */
+  --primary: #343598; /* Azul principal */
+  --secondary: #FEAE33; /* Amarillo secundario */
+  --accent: #F8280C; /* Rojo de acento */
   --background: #fff;
   --foreground: #222;
 }
@@ -31,47 +45,52 @@ a {
   transition: color 0.2s;
 }
 a:hover {
-  color: #b91c1c;
+  color: var(--pacto-azul);
 }
 
-/* Botones */
+/* Botones primarios */
 button, .btn, .shadcn-btn {
-  background: #b91c1c;
+  background: var(--pacto-azul);
   color: #fff;
   border-radius: 0.5rem;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  font-weight: 600;
 }
 button:hover, .btn:hover, .shadcn-btn:hover {
-  background: #991b1b;
+  background: #2a2d7a; /* Azul más oscuro 8-12% */
+  transform: translateY(-1px);
 }
 
 /* Botón secundario */
 .btn-outline, .shadcn-btn-outline {
-  background: #fff;
-  color: #222;
-  border: 2px solid #b91c1c;
+  background: var(--pacto-amarillo);
+  color: #000;
+  border: 2px solid var(--pacto-amarillo);
+  font-weight: 600;
 }
 .btn-outline:hover, .shadcn-btn-outline:hover {
-  background: #f3f4f6;
-  color: #b91c1c;
+  background: #e09a2a; /* Amarillo más oscuro 8-12% */
+  color: #000;
+  transform: translateY(-1px);
 }
 
 /* Títulos */
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: 800;
+  font-family: 'LEMON MILK', 'Inter', system-ui, sans-serif;
 }
 
 /* Badges y detalles */
 .badge, .border-primary, .border-accent {
-  border-color: #b91c1c !important;
-  color: #b91c1c !important;
+  border-color: var(--pacto-azul) !important;
+  color: var(--pacto-azul) !important;
   background: #fff !important;
 }
 
-/* Subrayado rojo para detalles */
-.underline-red {
-  border-bottom: 3px solid #b91c1c;
+/* Subrayado de acento */
+.underline-accent {
+  border-bottom: 3px solid var(--pacto-rojo);
   display: inline-block;
   padding-bottom: 2px;
 }
@@ -81,7 +100,7 @@ section, .section {
   background: #fff;
 }
 
-/* Animación gradiente vertical (de arriba a abajo) */
+/* Animación gradiente vertical con colores Pacto Histórico */
 @keyframes gradient-vertical {
   0% { top: -80px; }
   100% { top: 100%; }
@@ -91,10 +110,10 @@ section, .section {
   width: 12px !important;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-/* Animación gradiente horizontal (de izquierda a derecha) */
+/* Animación gradiente horizontal con colores Pacto Histórico */
 @keyframes gradient-horizontal {
   0% { left: -320px; }
   100% { left: 100%; }
@@ -104,6 +123,29 @@ section, .section {
   height: 12px !important;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+/* Gradiente multicolor Pacto Histórico */
+.pacto-gradient {
+  background: linear-gradient(135deg, 
+    var(--pacto-amarillo) 0%, 
+    var(--pacto-azul) 25%, 
+    var(--pacto-rojo) 50%, 
+    var(--pacto-verde) 75%, 
+    var(--pacto-morado) 100%);
+}
+
+/* Texto con gradiente Pacto Histórico */
+.pacto-text-gradient {
+  background: linear-gradient(135deg, 
+    var(--pacto-amarillo) 0%, 
+    var(--pacto-azul) 25%, 
+    var(--pacto-rojo) 50%, 
+    var(--pacto-verde) 75%, 
+    var(--pacto-morado) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 

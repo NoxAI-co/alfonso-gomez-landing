@@ -3,14 +3,14 @@ import { cn } from "@/lib/utils";
 import * as React from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+  "inline-flex items-center justify-center rounded-md text-sm font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pacto-azul focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:-translate-y-0.5 shadow-md hover:shadow-lg",
   {
     variants: {
       variant: {
-        default: "bg-red-600 text-white hover:bg-red-700",
-        outline: "border-2 border-red-600 text-gray-800 bg-white hover:bg-red-50 hover:text-red-700",
-        secondary: "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100",
-        destructive: "bg-red-800 text-white hover:bg-red-900",
+        default: "bg-pacto-azul text-white hover:bg-[#2a2d7a] font-heading",
+        outline: "border-2 border-pacto-amarillo bg-pacto-amarillo text-black hover:bg-[#e09a2a] font-heading",
+        secondary: "bg-white text-gray-800 border-2 border-gray-300 hover:bg-gray-100 font-heading",
+        destructive: "bg-pacto-rojo text-white hover:bg-[#d1220a] font-heading",
       },
       size: {
         default: "h-10 px-4 py-2",
