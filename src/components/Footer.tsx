@@ -19,7 +19,7 @@ export function Footer() {
           </div>
           {/* Copy legal minimalista */}
           <div className="text-xs text-gray-400 text-center">
-            © {new Date().getFullYear()} Jhon Cristancho
+            © {new Date().getFullYear()} Édgar Alfonso Gómez Román
           </div>
         </div>
       </Container>

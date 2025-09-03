@@ -268,7 +268,7 @@ export const AboutSection = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="max-w-6xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
             {/* Título de la sección */}
             <motion.div
@@ -278,294 +278,212 @@ export const AboutSection = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 font-heading">
-                <span className="text-pacto-morado">La historia de</span> Édgar &lsquo;El pote&rsquo; Gómez
-              </h2>
-              <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
-                Con una trayectoria de más de 30 años en el servicio público, Édgar Alfonso Gómez Román es un referente de experiencia y compromiso en Santander y en Colombia. Su historia está marcada por la cercanía con la comunidad, el impulso al deporte y la gestión legislativa responsable.
-              </p>
+                           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 font-heading">
+               <span className="text-pacto-morado">La historia de Édgar &lsquo;El pote&rsquo; Gómez</span>
+             </h2>
+             <p className="text-xl text-gray-600 font-body mb-8">
+               Con una trayectoria de más de 30 años en el servicio público, Édgar Alfonso Gómez Román es un referente de experiencia y compromiso en Santander y en Colombia. Su historia está marcada por la cercanía con la comunidad, el impulso al deporte y la gestión legislativa responsable.
+             </p>
             </motion.div>
 
-            {/* Contenido de la biografía */}
+            {/* Contenido de la biografía en formato CV */}
             <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
+              className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              {/* Datos personales y formación */}
+              {/* Header del CV con imagen */}
               <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
               >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-azul/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-azul" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Datos Personales y Formación</h3>
+                {/* Imagen de Edgar */}
+                <div className="flex-shrink-0">
+                  <Image
+                    src="/img/edgar.jpg"
+                    alt="Édgar Alfonso Gómez Román"
+                    width={200}
+                    height={200}
+                    className="rounded-2xl object-cover shadow-lg border-4 border-pacto-azul/20"
+                  />
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-azul pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Nacimiento e Identidad</h4>
-                    <p className="text-pacto-azul font-semibold">3 de octubre de 1953</p>
-                    <p className="text-gray-600 text-sm mt-2">Nació en Bogotá pero creció en Bucaramanga, donde cimentó su identidad santandereana</p>
+                {/* Información personal */}
+                <div className="text-center lg:text-left flex-1">
+                  <h3 className="text-3xl font-black text-gray-900 mb-3 font-heading">
+                    Édgar Alfonso Gómez Román
+                  </h3>
+                  <p className="text-xl text-pacto-azul font-semibold mb-2">
+                    &ldquo;El Pote&rdquo;
+                  </p>
+                  <p className="text-lg text-gray-600 mb-4">
+                    <strong>Fecha de nacimiento:</strong> 3 de octubre de 1953
+                  </p>
+                  <p className="text-lg text-gray-600 mb-4">
+                    <strong>Lugar:</strong> Bogotá, pero criado en Bucaramanga
+                  </p>
+                  <p className="text-lg text-gray-600">
+                    <strong>Profesión:</strong> Abogado - Universidad Santo Tomás de Bucaramanga
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Experiencia Profesional */}
+              <motion.div
+                className="mb-8"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="text-2xl font-black text-pacto-azul mb-4 font-heading border-b-2 border-pacto-azul pb-2">
+                  Experiencia Profesional
+                </h4>
+                
+                <div className="space-y-6">
+                  <div className="border-l-4 border-pacto-azul pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Senador de la República</h5>
+                      <span className="text-pacto-azul font-semibold text-lg">2022 - Actualidad</span>
+                    </div>
+                    <p className="text-gray-700">Liderando iniciativas legislativas para el desarrollo de Santander y Colombia</p>
                   </div>
                   
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Formación Académica</h4>
-                    <p className="text-pacto-verde font-semibold">Universidad Santo Tomás de Bucaramanga</p>
-                    <p className="text-gray-600 text-sm mt-2">Abogado que unió la visión jurídica con la sensibilidad social</p>
+                  <div className="border-l-4 border-pacto-verde pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Presidente Cámara de Representantes</h5>
+                      <span className="text-pacto-verde font-semibold text-lg">2009 - 2010</span>
+                    </div>
+                    <p className="text-gray-700">Firmó la Ley 1357 que fortaleció la seguridad jurídica de miles de acreedores</p>
                   </div>
                   
-                  <div className="border-l-4 border-pacto-amarillo pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Trayectoria</h4>
-                    <p className="text-pacto-amarillo font-semibold">Más de 30 años</p>
-                    <p className="text-gray-600 text-sm mt-2">De experiencia en el servicio público y compromiso con la comunidad</p>
+                  <div className="border-l-4 border-pacto-morado pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Representante a la Cámara</h5>
+                      <span className="text-pacto-morado font-semibold text-lg">2003-2006, 2006-2010, 2014-2018, 2018-2022</span>
+                    </div>
+                    <p className="text-gray-700">Múltiples periodos consolidando su papel como líder clave de Santander</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-pacto-amarillo pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Senador de la República</h5>
+                      <span className="text-pacto-amarillo font-semibold text-lg">2010 - 2014</span>
+                    </div>
+                    <p className="text-gray-700">Representando a Santander en el Senado de la República</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-pacto-azul pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Concejal de Bucaramanga</h5>
+                      <span className="text-pacto-azul font-semibold text-lg">1992-1994, 1995-1997</span>
+                    </div>
+                    <p className="text-gray-700">Consolidándose como un político cercano a la gente</p>
+                  </div>
+                  
+                  <div className="border-l-4 border-pacto-verde pl-6 py-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-2">
+                      <h5 className="text-xl font-bold text-gray-900">Director Coldeportes Santander</h5>
+                      <span className="text-pacto-verde font-semibold text-lg">1990 - 1992</span>
+                    </div>
+                    <p className="text-gray-700">Impulsando programas que fortalecieron la práctica deportiva en la región</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Primeros pasos en lo público */}
+              {/* Gestiones Legislativas Destacadas */}
               <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="mb-8"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
               >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-verde/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-verde" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Primeros Pasos en lo Público</h3>
-                  <p className="text-pacto-verde font-semibold">1990 - 1997</p>
-                </div>
+                <h4 className="text-2xl font-black text-pacto-verde mb-4 font-heading border-b-2 border-pacto-verde pb-2">
+                  Gestiones Legislativas Destacadas
+                </h4>
                 
                 <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Director de Coldeportes Santander</h4>
-                    <p className="text-pacto-verde font-semibold">1990 - 1992</p>
-                    <p className="text-gray-600 text-sm mt-2">Impulsando programas que fortalecieron la práctica deportiva en la región</p>
+                  <div className="bg-pacto-verde/5 p-4 rounded-lg border-l-4 border-pacto-verde">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Comisión Cuarta de la Cámara (2019)</h5>
+                    <p className="text-gray-700">Presidió durante el estudio del Plan Nacional de Desarrollo 2018-2022, liderando debates presupuestales fundamentales</p>
                   </div>
                   
-                  <div className="border-l-4 border-pacto-azul pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Concejal de Bucaramanga</h4>
-                    <p className="text-pacto-azul font-semibold">1992 - 1994 y 1995 - 1997</p>
-                    <p className="text-gray-600 text-sm mt-2">Se consolidó como un político cercano a la gente</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Ascenso legislativo y presidencia */}
-            <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              {/* Ascenso legislativo */}
-              <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-morado/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-morado" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Ascenso Legislativo</h3>
-                  <p className="text-pacto-morado font-semibold">2002 - 2022</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-morado pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Representante a la Cámara</h4>
-                    <p className="text-pacto-morado font-semibold">2003-2006, 2006-2010, 2014-2018, 2018-2022</p>
-                    <p className="text-gray-600 text-sm mt-2">Múltiples periodos consolidando su liderazgo</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-azul pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Senador de la República</h4>
-                    <p className="text-pacto-azul font-semibold">2010 - 2014</p>
-                    <p className="text-gray-600 text-sm mt-2">Más de 20 años en el Congreso como líder clave de Santander</p>
+                  <div className="bg-pacto-azul/5 p-4 rounded-lg border-l-4 border-pacto-azul">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Ley 1357 (2009)</h5>
+                    <p className="text-gray-700">Como Presidente de la Cámara, firmó esta ley que fortaleció la seguridad jurídica de miles de acreedores</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Presidencia de la Cámara */}
+              {/* Compromiso Comunitario y Deporte */}
               <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="mb-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
               >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-amarillo/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-amarillo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Presidencia de la Cámara</h3>
-                  <p className="text-pacto-amarillo font-semibold">2009 - 2010</p>
-                </div>
+                <h4 className="text-2xl font-black text-pacto-morado mb-4 font-heading border-b-2 border-pacto-morado pb-2">
+                  Compromiso Comunitario y Deporte
+                </h4>
                 
-                <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-amarillo pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Asunción del Cargo</h4>
-                    <p className="text-pacto-amarillo font-semibold">20 de julio de 2009</p>
-                    <p className="text-gray-600 text-sm mt-2">Garantizando la participación de todos los movimientos políticos</p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div className="bg-pacto-morado/5 p-4 rounded-lg">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Aliado Comunitario</h5>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>• Fuerte aliado del gremio del calzado</li>
+                      <li>• Impulsor de grupos de ayuda a la tercera edad</li>
+                      <li>• Referente de liderazgo solidario</li>
+                    </ul>
                   </div>
                   
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Ley 1357</h4>
-                    <p className="text-pacto-verde font-semibold">Logro Legislativo</p>
-                    <p className="text-gray-600 text-sm mt-2">Firmó la ley que fortaleció la seguridad jurídica de miles de acreedores</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Gestiones legislativas y compromiso comunitario */}
-            <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              {/* Gestiones legislativas destacadas */}
-              <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-azul/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-azul" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Gestiones Legislativas Destacadas</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-azul pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Comisión Cuarta de la Cámara</h4>
-                    <p className="text-pacto-azul font-semibold">2019</p>
-                    <p className="text-gray-600 text-sm mt-2">Presidió durante el estudio del Plan Nacional de Desarrollo 2018-2022</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Debates Presupuestales</h4>
-                    <p className="text-pacto-verde font-semibold">Liderazgo Clave</p>
-                    <p className="text-gray-600 text-sm mt-2">Dirigiendo debates presupuestales fundamentales para el país</p>
+                  <div className="bg-pacto-amarillo/5 p-4 rounded-lg">
+                    <h5 className="font-bold text-lg text-gray-900 mb-2">Deporte como Vocación</h5>
+                    <ul className="text-gray-700 space-y-1">
+                      <li>• Presidente de la Liga Santandereana de Tenis</li>
+                      <li>• Fundador de la Liga de Microfútbol de Salón</li>
+                      <li>• Miembro de la Junta Directiva del Club Unión</li>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Compromiso comunitario */}
+              {/* Resumen de Trayectoria */}
               <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="bg-gradient-to-r from-pacto-azul/10 to-pacto-morado/10 p-6 rounded-xl border border-pacto-azul/20"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
               >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-verde/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-verde" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Compromiso Comunitario</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Gremio del Calzado</h4>
-                    <p className="text-pacto-verde font-semibold">Fuerte Aliado</p>
-                    <p className="text-gray-600 text-sm mt-2">Apoyando el desarrollo económico de la región</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-amarillo pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Tercera Edad</h4>
-                    <p className="text-pacto-amarillo font-semibold">Grupos de Ayuda</p>
-                    <p className="text-gray-600 text-sm mt-2">Impulsor de programas de apoyo a adultos mayores</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-morado pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Liderazgo Solidario</h4>
-                    <p className="text-pacto-morado font-semibold">Referente</p>
-                    <p className="text-gray-600 text-sm mt-2">Ejemplo de compromiso con la comunidad</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Deporte como vocación permanente */}
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.div
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-pacto-amarillo/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-pacto-amarillo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-black text-gray-900 mb-2 font-heading">Deporte como Vocación Permanente</h3>
-                  <p className="text-pacto-amarillo font-semibold">Herramienta de Inclusión y Progreso Social</p>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="border-l-4 border-pacto-amarillo pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Liga Santandereana de Tenis</h4>
-                    <p className="text-pacto-amarillo font-semibold">Presidente</p>
-                    <p className="text-gray-600 text-sm mt-2">Promoviendo el tenis como deporte de excelencia</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-verde pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Liga de Microfútbol de Salón</h4>
-                    <p className="text-pacto-verde font-semibold">Fundador</p>
-                    <p className="text-gray-600 text-sm mt-2">Creando espacios deportivos para la comunidad</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-pacto-azul pl-4">
-                    <h4 className="font-bold text-lg text-gray-900 mb-1">Club Unión</h4>
-                    <p className="text-pacto-azul font-semibold">Junta Directiva</p>
-                    <p className="text-gray-600 text-sm mt-2">Contribuyendo al desarrollo deportivo institucional</p>
-                  </div>
-                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3 font-heading">Resumen de Trayectoria</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Con más de <strong>30 años en el servicio público</strong>, Édgar Alfonso Gómez Román ha consolidado su papel como un líder clave de Santander y Colombia. 
+                  Su historia está marcada por la cercanía con la comunidad, el impulso al deporte como herramienta de inclusión social, 
+                  y una gestión legislativa responsable que ha beneficiado a miles de colombianos.
+                </p>
               </motion.div>
             </motion.div>
 
             {/* Cita final */}
             <motion.div
-              className="text-center"
+              className="mt-16 text-center"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-r from-pacto-azul/10 to-pacto-morado/10 rounded-2xl p-8 border border-pacto-azul/20">
                 <p className="text-2xl font-bold text-gray-900 leading-relaxed font-heading mb-4">
-                  &ldquo;Mi compromiso es seguir trabajando por Santander y Colombia, 
-                  llevando la voz de la gente al Congreso y transformando 
-                  las necesidades en soluciones concretas.&rdquo;
+                  &#8220;El deporte y la política son herramientas de inclusión y progreso social. 
+                  Mi compromiso de más de 30 años es seguir trabajando por Santander y Colombia, 
+                  llevando la voz de la gente al Congreso.&#8221;
                 </p>
                 <p className="text-lg text-pacto-azul font-semibold font-heading">
                   - Édgar Alfonso Gómez Román
