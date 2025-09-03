@@ -39,7 +39,7 @@ const Hero = () => {
                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-relaxed max-w-none"
                             >
                  <div className="mb-4">Más unidos, más potentes:</div>
-                 <div className="text-blue-300">Édgar 'El pote' Gómez</div>
+                 <div className="text-blue-300">Édgar &apos;El pote&apos; Gómez</div>
                </motion.h1>
 
              {/* Subtítulo */}
