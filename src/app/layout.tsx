@@ -4,7 +4,7 @@ import "./globals.css";
 
 import { Footer } from "@/components/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
-import Navbar from "@/components/ui/header-navbar";
+import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

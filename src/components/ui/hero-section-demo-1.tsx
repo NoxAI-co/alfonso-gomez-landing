@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 
 export default function HeroSectionOne() {
   return (
-    <div className="relative mx-auto mt-0 mb-10 flex max-w-7xl flex-col items-center justify-center">
+    <div className="relative mx-auto mt-0 mb-10 flex max-w-7xl flex-col items-center justify-center pt-32 sm:pt-36 md:pt-40">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 overflow-hidden">
         <div className="absolute top-0 h-40 w-px animate-gradient-vertical bg-gradient-to-b from-transparent via-pacto-azul to-transparent" />
       </div>
@@ -39,7 +39,7 @@ export default function HeroSectionOne() {
           </div>
         </div>
         <Fade cascade damping={0.1} triggerOnce>
-          <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black text-black md:text-4xl lg:text-7xl font-heading">
+                     <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black text-black md:text-4xl lg:text-7xl font-heading">
             <span className="text-black"><span className="text-pacto-verde">Más unidos</span>, más potentes: Édgar <span className="text-pacto-amarillo">‘El pote’</span>Gomez</span>
            
           
@@ -95,83 +95,4 @@ export default function HeroSectionOne() {
   );
 }
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <nav className="w-full border-b border-neutral-200 bg-white/80 backdrop-blur sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Logo */}
-        <div className="flex-shrink-0 flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pacto-amarillo to-pacto-azul flex items-center justify-center">
-            <span className="text-white font-black text-sm">PH</span>
-          </div>
-          <span className="text-xl font-black text-pacto-azul font-heading">Pacto Histórico</span>
-        </div>
-        {/* Desktop menu */}
-        <div className="hidden md:flex flex-1 justify-center">
-          <ul className="flex gap-8">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                              <a
-                href={item.href}
-                className="text-base font-bold text-gray-800 hover:text-pacto-azul transition-colors font-heading"
-              >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        {/* Mobile menu button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setOpen(!open)}
-            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-200 focus:outline-none"
-            aria-label="Abrir menú"
-          >
-            <svg
-              className="h-6 w-6"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
-              {open ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white border-t border-neutral-200">
-          <ul className="flex flex-col items-center gap-4 py-4">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="text-base font-bold text-gray-800 hover:text-pacto-azul transition-colors font-heading"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
-}; 
+ 
