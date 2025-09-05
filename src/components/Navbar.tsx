@@ -12,18 +12,27 @@ export const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Mostrar navbar al hacer scroll hacia arriba o al estar en la parte superior
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+      // En desktop, siempre mostrar la navbar. En móvil, mantener el comportamiento original
+      if (window.innerWidth >= 768) {
         setIsVisible(true);
       } else {
-        setIsVisible(false);
+        // Comportamiento original para móvil
+        if (currentScrollY < lastScrollY || currentScrollY < 100) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       }
       
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, [lastScrollY]);
 
   // Agregar scroll suave global
@@ -72,14 +81,6 @@ export const Navbar = () => {
               className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
             >
               Sobre nosotros
-            </a>
-          </li>
-          <li>
-            <a
-              href="#proyectos"
-              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
-            >
-              Propuestas
             </a>
           </li>
           <li>
@@ -187,17 +188,6 @@ export const Navbar = () => {
               isMenuOpen ? 'translate-x-0' : 'translate-x-8'
             }`}>
               <a
-                href="#proyectos"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
-              >
-                Propuestas
-              </a>
-            </li>
-            <li className={`transform transition-all duration-300 delay-200 bg-white ${
-              isMenuOpen ? 'translate-x-0' : 'translate-x-8'
-            }`}>
-              <a
                 href="#testimonios"
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
@@ -205,7 +195,7 @@ export const Navbar = () => {
                 Testimonios
               </a>
             </li>
-            <li className={`transform transition-all duration-300 delay-250 bg-white ${
+            <li className={`transform transition-all duration-300 delay-200 bg-white ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-8'
             }`}>
               <a

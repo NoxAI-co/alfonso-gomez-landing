@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
 
   return (
-         <div className="relative min-h-screen w-screen overflow-hidden hero-fullscreen">
+         <div className="relative min-h-screen w-screen overflow-hidden hero-fullscreen pt-20 md:pt-24">
        {/* Fondo de Bucaramanga - Completo sin márgenes */}
        <div className="absolute inset-0 z-0 w-full h-full">
                  <Image
@@ -100,13 +100,13 @@ const Hero = () => {
                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
              >
                <a
-                 href="#biografia"
+                 href="#sobre-nosotros"
                  className="px-8 py-4 text-lg font-semibold text-white bg-pacto-azul hover:bg-pacto-morado rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Conoce su trayectoria
               </a>
               <a
-                href="#contacto"
+                href="#cta"
                  className="px-8 py-4 text-lg font-semibold text-pacto-amarillo border-2 border-pacto-amarillo hover:bg-pacto-amarillo hover:text-white hover:border-pacto-amarillo rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Súmate al cambio

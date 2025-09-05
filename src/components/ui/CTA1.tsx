@@ -8,10 +8,12 @@ export const CTA1 = () => (
     {/* Fondo con imagen y blur */}
     <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
       <Image
-        src="/img/cta}.jpg"
-        alt="Fondo CTA"
+        src="/img/promocion.png"
+        alt="Promoción para el Senado - Édgar 'El pote' Gómez"
         fill
         className="object-cover object-center brightness-75 blur-sm"
+        quality={90}
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-black/70" />
     </div>
