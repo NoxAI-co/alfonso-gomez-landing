@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
 
   return (
-         <div className="relative min-h-screen w-screen overflow-hidden hero-fullscreen pt-20 md:pt-24">
+         <div className="relative min-h-[80vh] w-screen overflow-hidden hero-fullscreen pt-20 md:pt-24">
        {/* Fondo de Bucaramanga - Completo sin márgenes */}
        <div className="absolute inset-0 z-0 w-full h-full">
                  <Image
@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
                     {/* Contenido principal - Layout de dos columnas */}
-       <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
+       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-4">
          <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
