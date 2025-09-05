@@ -405,7 +405,7 @@ export const AboutSection = () => {
                     &ldquo;Mi compromiso es seguir trabajando por Santander y Colombia, llevando la voz de la gente al Congreso y transformando las necesidades en soluciones concretas.&rdquo;
                   </p>
                   <p className="text-base sm:text-lg text-pacto-azul font-semibold font-heading">
-                    - Édgar Alfonso Gómez Román "El Pote"
+                    - Édgar Alfonso Gómez Román &ldquo;El Pote&rdquo;
                   </p>
                 </div>
               </div>
@@ -533,7 +533,7 @@ export const AboutSection = () => {
                       &ldquo;Estas propuestas no son solo palabras, son compromisos concretos para transformar la realidad de Santander y Colombia.&rdquo;
                     </p>
                     <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                      - Édgar Alfonso Gómez Román "El Pote"
+                      - Édgar Alfonso Gómez Román &ldquo;El Pote&rdquo;
                     </p>
                   </div>
                 </div>
@@ -746,7 +746,7 @@ export const AboutSection = () => {
                       &ldquo;Estos valores no son solo palabras, son el compromiso diario que mantengo con Santander y Colombia.&rdquo;
                     </p>
                     <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                      - Édgar Alfonso Gómez Román "El Pote"
+                      - Édgar Alfonso Gómez Román &ldquo;El Pote&rdquo;
                     </p>
                   </div>
                 </div>
