@@ -1,8 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
+// Componente memoizado para imágenes optimizadas
+const OptimizedImage = memo(({ src, alt, width, height, className, sizes, quality = 90, priority = false }: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className: string;
+  sizes: string;
+  quality?: number;
+  priority?: boolean;
+}) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    className={className}
+    loading={priority ? "eager" : "lazy"}
+    quality={quality}
+    sizes={sizes}
+    priority={priority}
+  />
+));
+
+OptimizedImage.displayName = 'OptimizedImage';
 
 export const AboutSection = () => {
   // Variantes de animación
@@ -96,17 +122,20 @@ export const AboutSection = () => {
                 {/* Imagen de Édgar con efectos integrados */}
                 <motion.div 
                   className="relative max-w-xs sm:max-w-sm md:max-w-md w-full"
+                  style={{ willChange: 'transform' }}
                   whileHover={{ 
                     scale: 1.05,
                     transition: { duration: 0.3 }
                   }}
                 >
-                  <Image
-                    src="/img/edgar1.jpg"
+                  <OptimizedImage
+                    src="/img/edgar_oficial.jpg"
                     alt="Edgar Alfonso Gómez Román"
                     width={400}
                     height={500}
                     className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={90}
                   />
                 </motion.div>
               </div>
@@ -214,10 +243,10 @@ export const AboutSection = () => {
             {/* Título de la sección */}
             <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-gray-900 mb-2 sm:mb-3 md:mb-4 font-heading px-2">
-                <span className="text-pacto-morado">La historia de Édgar &lsquo;El pote&rsquo; Gómez</span>
+                <span className="text-pacto-morado">¿Quién es Edgar el Pote Gómez?</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-body mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4">
-                Con una trayectoria de más de 30 años en el servicio público, Édgar Alfonso Gómez Román es un referente de experiencia y compromiso en Santander y en Colombia. Su historia está marcada por la cercanía con la comunidad, el impulso al deporte y la gestión legislativa responsable.
+                Un líder con una amplia trayectoria en el servicio público, que ha impulsado importantes desarrollos en beneficio de Santander y Colombia. Los programas sociales, el deporte y la comunidad han sido testigos de sus actuaciones como congresista. Emprendedor de proyectos empresariales en la industria del calzado, promotor del complejo comercial San Francisco Leather Shop. Además que su transparencia y rectitud lo han identificado como referente del ejercicio público.
               </p>
             </div>
 
@@ -229,11 +258,14 @@ export const AboutSection = () => {
                 <div className="flex justify-center mb-6">
                   <div className="relative">
                     <Image
-                      src="/img/edgar.jpg"
+                      src="/img/edgar_oficial.jpg"
                       alt="Édgar Alfonso Gómez Román"
                       width={200}
                       height={200}
-                      className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover shadow-xl border-4 border-pacto-azul/30"
+                      className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-full object-cover object-top shadow-xl border-4 border-pacto-azul/30"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, 144px"
                     />
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-morado rounded-full flex items-center justify-center shadow-lg">
                       <span className="text-white font-bold text-xs sm:text-sm md:text-base">PH</span>
@@ -249,18 +281,6 @@ export const AboutSection = () => {
                   &ldquo;El Pote&rdquo;
                 </p>
                 
-                {/* Datos personales en badges */}
-                <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
-                  <span className="bg-pacto-azul/10 text-pacto-azul px-3 py-1 rounded-full text-xs sm:text-sm font-semibold border border-pacto-azul/20">
-                    🎂 3 de octubre de 1953
-                  </span>
-                  <span className="bg-pacto-verde/10 text-pacto-verde px-3 py-1 rounded-full text-xs sm:text-sm font-semibold border border-pacto-verde/20">
-                    🏠 Bogotá, criado en Bucaramanga
-                  </span>
-                  <span className="bg-pacto-morado/10 text-pacto-morado px-3 py-1 rounded-full text-xs sm:text-sm font-semibold border border-pacto-morado/20">
-                    ⚖️ Abogado - Universidad Santo Tomás
-                  </span>
-                </div>
               </div>
 
               {/* Timeline de experiencia profesional */}
@@ -270,19 +290,31 @@ export const AboutSection = () => {
                 
                 {/* Experiencias - ORDEN CRONOLÓGICO CORRECTO */}
                 <div className="space-y-6 sm:space-y-8">
-                  {/* 1. Senador Actual - MÁS RECIENTE */}
+                  {/* 1. Empresario y consultor político - MÁS RECIENTE */}
                   <div className="relative flex items-start gap-4 sm:gap-6">
                     <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-azul rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
-                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2022</span>
+                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2025</span>
                     </div>
                     <div className="flex-1 bg-gradient-to-r from-pacto-azul/5 to-pacto-azul/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-azul">
-                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Senador de la República</h4>
-                      <p className="text-sm sm:text-base text-gray-700 mb-2">Liderando iniciativas legislativas para el desarrollo de Santander y Colombia</p>
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Empresario y consultor político</h4>
+                      <p className="text-sm sm:text-base text-gray-700 mb-2">Manejando el progreso desde lo privado…</p>
                       <span className="inline-block bg-pacto-azul text-white px-2 py-1 rounded text-xs font-semibold">Actualidad</span>
                     </div>
                   </div>
 
-                  {/* 2. Senador 2010-2014 */}
+                  {/* 2. Representante a la Cámara 2014-2022 */}
+                  <div className="relative flex items-start gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-verde rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
+                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2014</span>
+                    </div>
+                    <div className="flex-1 bg-gradient-to-r from-pacto-verde/5 to-pacto-verde/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-verde">
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Representante a la Cámara</h4>
+                      <p className="text-sm sm:text-base text-gray-700 mb-2">Consolidando su papel como líder clave de Santander</p>
+                      <span className="inline-block bg-pacto-verde text-white px-2 py-1 rounded text-xs font-semibold">2014-2022</span>
+                    </div>
+                  </div>
+
+                  {/* 3. Senador 2010-2014 */}
                   <div className="relative flex items-start gap-4 sm:gap-6">
                     <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-amarillo rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
                       <span className="text-white font-bold text-xs sm:text-sm md:text-base">2010</span>
@@ -291,30 +323,6 @@ export const AboutSection = () => {
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Senador de la República</h4>
                       <p className="text-sm sm:text-base text-gray-700 mb-2">Periodo legislativo en el Senado de Colombia</p>
                       <span className="inline-block bg-pacto-amarillo text-white px-2 py-1 rounded text-xs font-semibold">2010-2014</span>
-                    </div>
-                  </div>
-
-                  {/* 3. Presidencia Cámara */}
-                  <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-verde rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
-                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2009</span>
-                    </div>
-                    <div className="flex-1 bg-gradient-to-r from-pacto-verde/5 to-pacto-verde/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-verde">
-                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Presidente Cámara de Representantes</h4>
-                      <p className="text-sm sm:text-base text-gray-700 mb-2">Firmó la Ley 1357 que fortaleció la seguridad jurídica de miles de acreedores</p>
-                      <span className="inline-block bg-pacto-verde text-white px-2 py-1 rounded text-xs font-semibold">2009-2010</span>
-                    </div>
-                  </div>
-
-                  {/* 4. Representante a la Cámara - MÁS ANTIGUO */}
-                  <div className="relative flex items-start gap-4 sm:gap-6">
-                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pacto-morado rounded-full flex items-center justify-center shadow-lg z-10 relative mt-6 sm:mt-8 md:mt-10">
-                      <span className="text-white font-bold text-xs sm:text-sm md:text-base">2003</span>
-                    </div>
-                    <div className="flex-1 bg-gradient-to-r from-pacto-morado/5 to-pacto-morado/10 p-4 sm:p-5 rounded-xl border-l-4 border-pacto-morado">
-                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Representante a la Cámara</h4>
-                      <p className="text-sm sm:text-base text-gray-700 mb-2">Múltiples periodos consolidando su papel como líder clave de Santander</p>
-                      <span className="inline-block bg-pacto-morado text-white px-2 py-1 rounded text-xs font-semibold">2003-2010, 2014-2022</span>
                     </div>
                   </div>
                 </div>
@@ -397,7 +405,7 @@ export const AboutSection = () => {
                     &ldquo;Mi compromiso es seguir trabajando por Santander y Colombia, llevando la voz de la gente al Congreso y transformando las necesidades en soluciones concretas.&rdquo;
                   </p>
                   <p className="text-base sm:text-lg text-pacto-azul font-semibold font-heading">
-                    - Édgar Alfonso Gómez Román
+                    - Édgar Alfonso Gómez Román "El Pote"
                   </p>
                 </div>
               </div>
@@ -525,7 +533,7 @@ export const AboutSection = () => {
                       &ldquo;Estas propuestas no son solo palabras, son compromisos concretos para transformar la realidad de Santander y Colombia.&rdquo;
                     </p>
                     <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                      - Édgar Alfonso Gómez Román
+                      - Édgar Alfonso Gómez Román "El Pote"
                     </p>
                   </div>
                 </div>
@@ -548,8 +556,18 @@ export const AboutSection = () => {
                       width={400}
                       height={500}
                       className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
+                      loading="lazy"
+                      quality={90}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </motion.div>
+                  
+                  {/* Texto debajo de la imagen */}
+                  <div className="text-center mt-4 sm:mt-6">
+                    <p className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 font-heading">
+                      Abanderados del cambio
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -581,6 +599,9 @@ export const AboutSection = () => {
                       width={400}
                       height={500}
                       className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-lg sm:shadow-xl md:shadow-2xl"
+                      loading="lazy"
+                      quality={90}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </motion.div>
                 </div>
@@ -725,7 +746,7 @@ export const AboutSection = () => {
                       &ldquo;Estos valores no son solo palabras, son el compromiso diario que mantengo con Santander y Colombia.&rdquo;
                     </p>
                     <p className="text-sm sm:text-base text-pacto-azul font-semibold font-heading">
-                      - Édgar Alfonso Gómez Román
+                      - Édgar Alfonso Gómez Román "El Pote"
                     </p>
                   </div>
                 </div>

@@ -38,8 +38,18 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         {/* Logo y título */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pacto-amarillo to-pacto-azul flex items-center justify-center shadow-lg">
-            <span className="text-white font-black text-sm">PH</span>
+          <div className="w-12 h-12 flex items-center justify-center">
+            <Image
+              src="/img/logo.png"
+              alt="Logo Pacto Histórico"
+              width={48}
+              height={48}
+              className="w-full h-full object-contain"
+              style={{ backgroundColor: 'transparent' }}
+              priority
+              quality={95}
+              sizes="48px"
+            />
           </div>
           <span className="text-xl font-black text-pacto-azul font-heading">
             Pacto Histórico
@@ -50,7 +60,7 @@ export const Navbar = () => {
         <ul className="hidden md:flex gap-8">
           <li>
             <a
-              href="#inicio"
+              href="#hero"
               className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
             >
               Inicio
@@ -58,7 +68,7 @@ export const Navbar = () => {
           </li>
           <li>
             <a
-              href="#sobre"
+              href="#sobre-nosotros"
               className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
             >
               Sobre nosotros
@@ -69,7 +79,7 @@ export const Navbar = () => {
               href="#proyectos"
               className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
             >
-              Proyectos
+              Propuestas
             </a>
           </li>
           <li>
@@ -78,6 +88,14 @@ export const Navbar = () => {
               className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
             >
               Testimonios
+            </a>
+          </li>
+          <li>
+            <a
+              href="#cta"
+              className="text-gray-800 font-bold hover:text-pacto-azul transition-colors font-heading"
+            >
+              Contacto
             </a>
           </li>
         </ul>
@@ -114,8 +132,18 @@ export const Navbar = () => {
           {/* Header del menú */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pacto-amarillo to-pacto-azul flex items-center justify-center">
-                <span className="text-white font-black text-sm">PH</span>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image
+                  src="/img/logo.png"
+                  alt="Logo Pacto Histórico"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                  style={{ backgroundColor: 'transparent' }}
+                  priority
+                  quality={95}
+                  sizes="40px"
+                />
               </div>
               <span className="text-lg font-black text-pacto-azul font-heading">
                 Pacto Histórico
@@ -137,7 +165,7 @@ export const Navbar = () => {
               isMenuOpen ? 'translate-x-0' : 'translate-x-8'
             }`}>
               <a
-                href="#inicio"
+                href="#hero"
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
               >
@@ -148,7 +176,7 @@ export const Navbar = () => {
               isMenuOpen ? 'translate-x-0' : 'translate-x-8'
             }`}>
               <a
-                href="#sobre"
+                href="#sobre-nosotros"
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
               >
@@ -163,7 +191,7 @@ export const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
               >
-                Proyectos
+                Propuestas
               </a>
             </li>
             <li className={`transform transition-all duration-300 delay-200 bg-white ${
@@ -175,6 +203,17 @@ export const Navbar = () => {
                 className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
               >
                 Testimonios
+              </a>
+            </li>
+            <li className={`transform transition-all duration-300 delay-250 bg-white ${
+              isMenuOpen ? 'translate-x-0' : 'translate-x-8'
+            }`}>
+              <a
+                href="#cta"
+                onClick={() => setIsMenuOpen(false)}
+                className="block py-3 px-4 text-lg text-gray-800 font-bold hover:text-pacto-azul hover:bg-gray-50 rounded-lg transition-all font-heading bg-white"
+              >
+                Contacto
               </a>
             </li>
           </ul>

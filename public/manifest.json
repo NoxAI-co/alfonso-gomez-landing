@@ -1,0 +1,21 @@
+{
+  "name": "El Pote - Édgar Gómez",
+  "short_name": "El Pote",
+  "description": "Édgar 'El pote' Gómez - Senado",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#343598",
+  "icons": [
+    {
+      "src": "/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -16,6 +16,8 @@ const Hero = () => {
            fill
            className="object-cover"
            priority
+           quality={85}
+           sizes="100vw"
          />
                  {/* Overlay con blur y opacidad para contraste */}
          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
@@ -32,14 +34,15 @@ const Hero = () => {
                      {/* Columna izquierda - Texto */}
            <div className="text-left">
              {/* Título principal */}
-             <motion.h1
+                            <motion.h1
                initial={{ opacity: 0, x: -30 }}
                animate={{ opacity: 1, x: 0 }}
                transition={{ duration: 0.8, delay: 0.2 }}
                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-relaxed max-w-none"
                             >
                  <div className="mb-4">Más unidos, más potentes:</div>
-                 <div className="text-blue-300">Édgar &apos;El pote&apos; Gómez</div>
+                 <div className="text-pacto-amarillo">Édgar &apos;El pote&apos; Gómez</div>
+                 <div className="text-xl md:text-2xl lg:text-3xl font-bold mt-2 text-white bg-pacto-morado px-4 py-2 rounded-lg inline-block border-2 border-pacto-amarillo shadow-lg">Senado</div>
                </motion.h1>
 
              {/* Subtítulo */}
@@ -47,7 +50,7 @@ const Hero = () => {
                initial={{ opacity: 0, x: -30 }}
                animate={{ opacity: 1, x: 0 }}
                transition={{ duration: 0.8, delay: 0.4 }}
-               className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-8 font-medium"
+               className="text-xl md:text-2xl lg:text-3xl text-white mb-8 font-bold"
              >
                Experiencia, cercanía y compromiso al servicio de Santander y de Colombia.
              </motion.h2>
@@ -83,6 +86,8 @@ const Hero = () => {
                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                    allowFullScreen
                    className="w-full h-full"
+                   loading="lazy"
+                   style={{ willChange: 'transform' }}
                  />
                </div>
              </motion.div>
@@ -96,13 +101,13 @@ const Hero = () => {
              >
                <a
                  href="#biografia"
-                 className="px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                 className="px-8 py-4 text-lg font-semibold text-white bg-pacto-azul hover:bg-pacto-morado rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Conoce su trayectoria
               </a>
               <a
                 href="#contacto"
-                 className="px-8 py-4 text-lg font-semibold text-blue-300 border-2 border-blue-300 hover:bg-blue-400 hover:text-white hover:border-blue-400 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                 className="px-8 py-4 text-lg font-semibold text-pacto-amarillo border-2 border-pacto-amarillo hover:bg-pacto-amarillo hover:text-white hover:border-pacto-amarillo rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Súmate al cambio
               </a>
