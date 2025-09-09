@@ -443,8 +443,14 @@ export const AboutSection = () => {
                     {/* Deporte y Juventud */}
                     <div className="relative group">
                       {/* Nodo del timeline */}
-                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚽</span>
+                      <div className="relative z-10 mx-auto flex items-center justify-center mb-4 sm:mb-6">
+                        <Image
+                          src="/img/deporteIcon.png"
+                          alt="Icono de Deporte y Juventud"
+                          width={80}
+                          height={80}
+                          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                        />
                       </div>
                       
                       {/* Contenido */}
@@ -464,8 +470,14 @@ export const AboutSection = () => {
                     {/* Economía Local */}
                     <div className="relative group">
                       {/* Nodo del timeline */}
-                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">👞</span>
+                      <div className="relative z-10 mx-auto flex items-center justify-center mb-4 sm:mb-6">
+                        <Image
+                          src="/img/economiaIcon.png"
+                          alt="Icono de Economía Local"
+                          width={80}
+                          height={80}
+                          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                        />
                       </div>
                       
                       {/* Contenido */}
@@ -485,8 +497,14 @@ export const AboutSection = () => {
                     {/* Protección Social */}
                     <div className="relative group">
                       {/* Nodo del timeline */}
-                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">🤝</span>
+                      <div className="relative z-10 mx-auto flex items-center justify-center mb-4 sm:mb-6">
+                        <Image
+                          src="/img/proteccionIcon.png"
+                          alt="Icono de Protección Social"
+                          width={80}
+                          height={80}
+                          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                        />
                       </div>
                       
                       {/* Contenido */}
@@ -506,8 +524,14 @@ export const AboutSection = () => {
                     {/* Gestión Legislativa */}
                     <div className="relative group">
                       {/* Nodo del timeline */}
-                      <div className="relative z-10 mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-full flex items-center justify-center shadow-xl border-4 border-white mb-4 sm:mb-6">
-                        <span className="text-white text-2xl sm:text-3xl md:text-4xl">⚖️</span>
+                      <div className="relative z-10 mx-auto flex items-center justify-center mb-4 sm:mb-6">
+                        <Image
+                          src="/img/gestionIcon.png"
+                          alt="Icono de Gestión Legislativa"
+                          width={80}
+                          height={80}
+                          className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                        />
                       </div>
                       
                       {/* Contenido */}
@@ -623,17 +647,16 @@ export const AboutSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                   {/* Valor 1: Cercanía */}
                   <div className="text-center group">
-                    {/* Métrica principal */}
-                    <div className="relative mb-6">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-azul mb-2">100%</div>
-                      <div className="text-sm sm:text-base text-gray-600 font-medium">Presencia Comunitaria</div>
-                    </div>
                     
                     {/* Icono profesional */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-azul to-pacto-azul/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
+                    <div className="flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
+                      <Image
+                        src="/img/cercaniaIcon.png"
+                        alt="Icono de Cercanía"
+                        width={80}
+                        height={80}
+                        className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                      />
                     </div>
                     
                     {/* Título y descripción */}
@@ -652,17 +675,16 @@ export const AboutSection = () => {
 
                   {/* Valor 2: Experiencia */}
                   <div className="text-center group">
-                    {/* Métrica principal */}
-                    <div className="relative mb-6">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-verde mb-2">20+</div>
-                      <div className="text-sm sm:text-base text-gray-600 font-medium">Años de Experiencia</div>
-                    </div>
                     
                     {/* Icono profesional */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-verde to-pacto-verde/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                    <div className="flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
+                      <Image
+                        src="/img/experienciaIcon.png"
+                        alt="Icono de Experiencia"
+                        width={80}
+                        height={80}
+                        className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                      />
                     </div>
                     
                     {/* Título y descripción */}
@@ -675,23 +697,22 @@ export const AboutSection = () => {
                     
                     {/* Barra de progreso */}
                     <div className="mt-4 w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-pacto-verde h-2 rounded-full" style={{width: '95%'}}></div>
+                      <div className="bg-pacto-verde h-2 rounded-full" style={{width: '100%'}}></div>
                     </div>
                   </div>
 
                   {/* Valor 3: Compromiso Social */}
                   <div className="text-center group">
-                    {/* Métrica principal */}
-                    <div className="relative mb-6">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-morado mb-2">∞</div>
-                      <div className="text-sm sm:text-base text-gray-600 font-medium">Compromiso Infinito</div>
-                    </div>
                     
                     {/* Icono profesional */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-morado to-pacto-morado/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
+                    <div className="flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
+                      <Image
+                        src="/img/compromisoIcon.png"
+                        alt="Icono de Compromiso Social"
+                        width={80}
+                        height={80}
+                        className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                      />
                     </div>
                     
                     {/* Título y descripción */}
@@ -710,18 +731,16 @@ export const AboutSection = () => {
 
                   {/* Valor 4: Transparencia */}
                   <div className="text-center group">
-                    {/* Métrica principal */}
-                    <div className="relative mb-6">
-                      <div className="text-4xl sm:text-5xl md:text-6xl font-black text-pacto-amarillo mb-2">100%</div>
-                      <div className="text-sm sm:text-base text-gray-600 font-medium">Transparencia Total</div>
-                    </div>
                     
                     {/* Icono profesional */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-gradient-to-br from-pacto-amarillo to-pacto-amarillo/80 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl border-2 border-white group-hover:scale-105 transition-transform duration-300">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
+                    <div className="flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 transition-transform duration-300">
+                      <Image
+                        src="/img/transparenciaIcon.png"
+                        alt="Icono de Transparencia"
+                        width={80}
+                        height={80}
+                        className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                      />
                     </div>
                     
                     {/* Título y descripción */}
