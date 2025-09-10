@@ -19,8 +19,8 @@ const Hero = () => {
            quality={85}
            sizes="100vw"
          />
-                 {/* Overlay con blur y opacidad para contraste */}
-         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+                 {/* Overlay con gradiente azul-morado elegante */}
+         <div className="absolute inset-0 backdrop-blur-sm" style={{background: 'linear-gradient(135deg, #343598 0%, #8F3292 100%)'}}></div>
       </div>
 
                     {/* Contenido principal - Layout de dos columnas */}
@@ -99,7 +99,7 @@ const Hero = () => {
              >
                <a
                  href="#sobre-nosotros"
-                 className="px-8 py-4 text-lg font-semibold text-white bg-pacto-azul hover:bg-pacto-morado rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                 className="px-8 py-4 text-lg font-semibold text-white bg-pacto-azul hover:bg-white hover:text-pacto-azul rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                >
                  Conoce su trayectoria
               </a>
