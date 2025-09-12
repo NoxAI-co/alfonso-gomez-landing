@@ -34,7 +34,7 @@ export default function Construccion() {
           <p className="text-blue-200 mb-4">
             Contáctanos en{' '}
             <a href="mailto:contacto@elpotegomez.com" className="text-white hover:underline">
-              info@ejemplo.com
+              contacto@elpotegomez.com
             </a>
           </p>
         </div>
